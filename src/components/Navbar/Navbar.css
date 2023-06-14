@@ -1,0 +1,40 @@
+.navbar{
+    
+    height: 70px;
+    background-color:white;
+    display: flex;
+    justify-content:space-between;
+    
+}
+.navContainer{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    display: flex;
+    position: relative;
+    justify-content:space-evenly;
+} 
+.navButtonS{
+    margin-left: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    color:  #69ba00;
+    font-size:inherit;
+    font-style: italic;
+    border: 3px solid  #69ba00;
+    border-radius: 20px;
+    background-color: white;
+}
+.navButton{
+    cursor: pointer;
+    color:black;
+    border:  white;
+    background-color: white;
+    margin-right: 50px;
+    font-size: medium;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.logo{
+    width: 10%;
+}
