@@ -1,5 +1,4 @@
 .navbar{
-    
     height: 70px;
     background-color:white;
     display: flex;
@@ -19,10 +18,10 @@
     margin-left: 15px;
     padding: 5px 10px;
     cursor: pointer;
-    color:  #69ba00;
+    color:  #283384;
     font-size:inherit;
     font-style: italic;
-    border: 3px solid  #69ba00;
+    border: 3px solid  #283384      ;
     border-radius: 20px;
     background-color: white;
 }
@@ -36,5 +35,5 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .logo{
-    width: 10%;
+    width: 8%;
 }

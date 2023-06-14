@@ -1,41 +1,41 @@
-import React from 'react'
-import './Login.css'
+import React from "react";
+import "./Login.css";
+import logologin from "./logol.png";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  };
+
   return (
     <div className="App">
-    <div className="loginContainer">
-      <h1>Welcome Back!</h1>
+      <div className="loginContainer">
+        <img src={logologin} alt="logo" className="logos" />
+        <p className="text">
+          Bienvenue sur l'application <br />
+          NOZ collaborateurs !
+        </p>
+        <div className="input-container">
+          <input placeholder="email" type="text" name="uname" required />
+        </div>
+        <div className="input-container">
+          <input type="password" placeholder="password" name="pass" required />
+        </div>
 
-      <div className="input-container">
-        <label>Username </label>
-        <input type="text" name="uname" required />
-        {/* {renderErrorMessage("uname")} */}
+        <button className="loginBut" onClick={handleClick}>
+          <p>Se connecter</p>
+        </button>
+        <div className="signup">
+          <p>
+            Pas encore de compte ? <a href="SignUp">Inscrivez-vous...</a>
+          </p>
+        </div>
       </div>
-      <div className="input-container">
-        <label>Password </label>
-        <input type="password" name="pass" required />
-        {/* {renderErrorMessage("pass")} */}
-      </div>
-
-      <a href="">Forgot password?</a>
-      <a href="SignUp">Create a new account</a>
-      <button className="loginBut">
-        <p>Login</p>
-      </button>
-
-      <button className="siG">
-        <img
-          src="https://www.freepnglogos.com/uploads/google-logo-png/google-logo-png-suite-everything-you-need-know-about-google-newest-0.png"
-          alt="Trees"
-          height="30"
-        />
-        <p>Sign in with Google</p>
-        
-      </button>
     </div>
-  </div>
-);
-}
+  );
+};
 
-export default Login
+export default Login;

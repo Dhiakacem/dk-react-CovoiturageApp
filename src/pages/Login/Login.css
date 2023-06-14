@@ -4,87 +4,81 @@
   justify-content: center;
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url("./LoginPic.jpg");
   background-size: contain;
 }
-
-.loginContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25em;
-  height: 85vh;
-  background-color: rgb(255, 255, 255);
-  border-radius: 25px;
+.logos {
+    width: 50%;
 }
+
+.loginContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 24em;
+    height: 92vh;
+    background: linear-gradient( #BDBDBD , #343F87);
+    border-radius: 25px;
+  }
 .input-container {
   display: flex;
   flex-direction: column;
-  gap: 8px;
   margin: 10px;
 }
 .input-container input {
   height: 1.5em;
-  width: 15em;
-  border-radius: 15px;
-  border-width: 15px;
+  width: 22em;
+  border-radius: 10px;
+  border-width: 5px;
   border: white;
   box-shadow: 0 0 6px rgb(166, 159, 255);
   outline: none;
   padding: 10px;
-  font-size: 20px;
+  font-size: 12px;
 }
 input:focus {
-  box-shadow: 0 1px 1px #69ba00 inset, 0 0 16px #5a9e00;
+  box-shadow: 0 1px 1px #1F2075 inset, 0 0 16px #2d2f94;
   outline: 0 none;
 }
 a {
-  color: #69ba00;
+  color: #81BC01;
   font-weight: 500;
-  margin: 5px;
   cursor: pointer;
   align-self: baseline;
-  margin-left: 40px;
 }
 .loginBut {
-  height: 4em;
-  width: 24em;
+  height: 44px;
+  width: 18em;
   margin: 10px;
-  margin-top: 25px;
-  border-radius: 15px;
-  background: linear-gradient(#69ba00, #b1e76b);
-  border: none;
+  margin-top: 30px;
+  border-radius: 30px;
+  background: linear-gradient(#f8efef, white);
+  border: 2px solid #1F2075   ;
   transition: all 0.2s ease-in-out;
+  box-shadow: 5px 2px 2px #343F87;
 }
 .loginBut:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 12px rgb(199, 199, 199);
 }
 .loginBut p {
-  color: white;
-  font-size: 20px;
-  margin-top: 13px;
+  color: #1F2075;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
 }
-.siG {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 18px;
-  height: 4em;
-  width: 24em;
-  margin: 10px;
-  border-radius: 15px;
-  background-color: rgb(255, 255, 255);
-  border-color: rgb(152, 145, 255);
-  border-width: 3px;
-  border-style: dashed;
-  transition: all 0.2s ease-in-out;
+.text{
+    margin-top: 20px;
+    color : white ; 
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    margin-bottom: 60px;
 }
-.siG:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 12px rgb(199, 199, 199);
-  cursor: pointer;
+.signup{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.siG p {
-  font-size: 20px;
+.signup p {
+    color: white;
 }
