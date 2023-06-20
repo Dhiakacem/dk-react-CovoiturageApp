@@ -1,0 +1,46 @@
+.imageTextContainer {
+    max-width: 100%;
+    padding: 100px;
+    box-sizing: border-box;
+  }
+  
+  .imageTextGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+  
+  @media (min-width: 768px) {
+    .imageTextGrid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  
+  .imageTextImageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  } 
+  
+  .imageTextImage {
+    max-width: 400px; /* Adjust the maximum width as needed */
+    height: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .imageTextContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  
+  }
+  
+  .imageTextContent p {
+    margin: 0;
+  }
+  

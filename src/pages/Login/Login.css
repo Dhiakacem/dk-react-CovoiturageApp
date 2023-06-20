@@ -6,79 +6,78 @@
   min-height: 100vh;
   background-size: contain;
 }
-.logos {
-    width: 50%;
-}
 
-.loginContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 24em;
-    height: 92vh;
-    background: linear-gradient( #BDBDBD , #343F87);
-    border-radius: 25px;
-  }
-.input-container {
+.loginContainer {
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  align-items: center;
+  width: 90%;
+  max-width: 400px;
+  height: 92vh;
+  background: linear-gradient(#BDBDBD, #343F87);
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
 }
-.input-container input {
-  height: 1.5em;
-  width: 22em;
+
+.inputcontainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+
+.inputcontainer input {
+  height: 40px;
   border-radius: 10px;
-  border-width: 5px;
-  border: white;
-  box-shadow: 0 0 6px rgb(166, 159, 255);
-  outline: none;
-  padding: 10px;
-  font-size: 12px;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
 }
-input:focus {
-  box-shadow: 0 1px 1px #1F2075 inset, 0 0 16px #2d2f94;
-  outline: 0 none;
-}
-a {
+
+.signup a {
   color: #81BC01;
   font-weight: 500;
   cursor: pointer;
-  align-self: baseline;
 }
+
 .loginBut {
-  height: 44px;
-  width: 18em;
-  margin: 10px;
-  margin-top: 30px;
+  height: 40px;
+  width: 100%;
+  margin: 10px 0;
   border-radius: 30px;
   background: linear-gradient(#f8efef, white);
-  border: 2px solid #1F2075   ;
+  border: 2px solid #1F2075;
   transition: all 0.2s ease-in-out;
   box-shadow: 5px 2px 2px #343F87;
 }
+
 .loginBut:hover {
   transform: scale(1.1);
 }
-.loginBut p {
-  color: #1F2075;
-  font-size: 18px;
+
+.texts {
+  margin-top: 10px;
+  color: white;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
-  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 30px;
 }
-.text{
-    margin-top: 20px;
-    color : white ; 
-    font-weight: bold;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 18px;
-    margin-bottom: 60px;
+
+.signup {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.signup{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+@media screen and (max-width: 768px) {
+  .loginContainer {
+    width: 80%;
+  }
 }
-.signup p {
-    color: white;
+
+@media screen and (max-width: 480px) {
+  .loginContainer {
+    width: 90%;
+  }
 }
