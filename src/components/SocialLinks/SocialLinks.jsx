@@ -1,64 +1,50 @@
 import React from "react";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { HiOutlineMail } from "react-icons/hi";
+import {  FaLinkedin } from "react-icons/fa";
+import {  RiInstagramFill } from "react-icons/ri";
+import { FaFacebookF , FaInstagram } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import "./SocialLinks.css";
+
 const SocialLinks = () => {
   const links = [
     {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={20} />
+          LinkedIn <FaLinkedin size={20} className="linkedin-icon" />
         </>
       ),
-      href: "https://www.linkedin.com/in/dhia-kacem-70031a220/",
+      href: "https://www.linkedin.com/company/veo-worldwide-services/mycompany/verification/",
       style: "rounded-tr-md",
     },
     {
       id: 2,
       child: (
         <>
-          GitHub <FaGithub size={20} />
+          Facebook <FaFacebookF size={20} className="github-icon" />
         </>
       ),
-      href: "https://github.com/Dhiakacem",
+      href: "https://www.facebook.com/veoworldwideservices/",
     },
     {
       id: 3,
       child: (
         <>
-          Mail <HiOutlineMail size={20} />
+         Instagram  <RiInstagramFill size={20} className="mail-icon" />
         </>
       ),
-      href: "mailto:foo@gmail.com",
-    },
-    {
-      id: 4,
-      child: (
-        <>
-          Resume <BsFillPersonLinesFill size={20} />
-        </>
-      ),
-      href: "/resume.pdf",
-      style: "rounded-br-md",
-      download: true,
+      href: "https://www.instagram.com/veoworlwide/",
     },
   ];
+
   return (
-    <div className=" hidden lg:flex flex-col top-[40%] left-0 fixed ">
+    <div className="social-links-container">
       <ul>
         {links.map(({ id, child, href, style, download }) => (
-          <li
-            key={id}
-            className={
-              "flex justify-between items-center  w-40 h-11 px-3 ml-[-115px] hover:ml-[-10px] hover:rounded-md duration-300 bg-white" +
-              " " +
-              style
-            }
-          >
+          <li key={id} className={`social-link-item ${style}`}>
             <a
               href={href}
-              className="flex justify-between items-center w-full text-gray-700"
+              className="social-link-text"
               download={download}
               target="_blank"
               rel="noreferrer"

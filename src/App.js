@@ -5,6 +5,7 @@ import Login from "./pages/Login/Login";
 import SignUp from "./pages/SignUp/SignUp";
 import { VStack } from "@chakra-ui/react";
 import List from "./pages/List/List";
+import Search from "./pages/Search/Search";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
+        <Route path="/Search" element={<Search />} />
         <Route path="/Covoiturage" element={<List/>}/>
       </Routes>
     </BrowserRouter>
@@ -20,22 +22,3 @@ function App() {
 }
 
 export default App;
-
-// -------  Social links with dark mode chakra UI - -------- //
-
-/* import { IconButton } from "@chakra-ui/button";
-import { FaSun, FaMoon, FaInstagram, FaGithub, FaLinkedin } from 'react-icons/fa'
-import { VStack, useColorMode } from "@chakra-ui/react";
-
-const { colorMode, toggleColorMode } = useColorMode();
-const isDark = colorMode === "dark";
-<VStack>
-<IconButton icon={<FaLinkedin />} isRound='true' onClick={toggleColorMode}></IconButton>
-<IconButton ml={2} icon={<FaInstagram />} isRound='true' onClick={toggleColorMode}></IconButton>
-<IconButton ml={2} icon={<FaGithub />} isRound='true' onClick={toggleColorMode}></IconButton>
-<IconButton ml={2} icon={isDark ? <FaSun /> : <FaMoon />} isRound='true' onClick={toggleColorMode}></IconButton>
-
-</VStack> */
-/*
-
- */

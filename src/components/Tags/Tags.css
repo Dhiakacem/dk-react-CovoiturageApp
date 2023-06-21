@@ -1,0 +1,155 @@
+.main-container {
+    background-color: #bdbdbd62;
+    padding: 20px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  .titre {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: -webkit-linear-gradient(to right, #1F2075, #81BC01);
+    background-image: linear-gradient(to right, #1F2075, #81BC01);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    align-self: center;
+  }
+  
+  .Tags-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    margin-bottom: 20px;
+    width: 80%;
+    overflow-x: auto;
+  }
+  
+  .cards {
+    position: relative; 
+    background-color: #fff;
+    width: 100%;
+    height: 120px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    align-items: center;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .cards:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 4px #81BC01, 2px 6px 10px #283482;
+  }
+  
+/*   .card-number {
+    position: absolute;
+
+    background-color: #1F2075;
+    color: black;
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 50%;
+  } */
+  
+  .user-profile {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .user-icon {
+    margin-right: 10px;
+  }
+  
+  .user-icon img {
+    width: 20px;
+    height: 21px;
+  }
+  
+ 
+  .username {
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 3px; 
+    margin-left: 25px;
+    flex-direction: row;
+    display: flex;
+  }
+  
+  .description {
+    color: #666;
+    text-align: center;
+  }
+  
+  .rating {
+    margin-top: 10px;
+  }
+  
+  .star {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url(stars.png); /* Replace with your star icon */
+    background-size: cover;
+  }
+  
+  .star.filled {
+    background-position: 0 0;
+  }
+  
+  .star.half {
+    background-position: -20px 0;
+  }
+  
+
+  .cards.position-1 {
+    border-color: #ffd700;
+  }
+  
+  .cards.position-2 {
+    border-color: silver;
+  }
+  
+  .cards.position-3 {
+    border-color: #cd7f32;
+  }
+  
+  .medal {
+    position: absolute;
+    top: -5px;
+    left: -8px;
+    width: 35px;
+    height: 35px;
+    
+  }
+  
+  .gold-medal img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .silver-medal img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .bronze-medal img {
+    width: 100%;
+    height: 100%;
+  }
+  

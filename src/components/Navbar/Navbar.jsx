@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-import { FaBars, FaTimes, FaHome, FaSearch, FaCar , FaUser } from "react-icons/fa";
+import {
+  FaBars,
+  FaTimes,
+  FaHome,
+  FaSearch,
+  FaCar,
+  FaUser,
+  FaUserTie,
+  FaUserFriends,
+} from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
-import logo from './logo.png';
+import logo from "./logo.png";
 
 function Navbar() {
   const [click, setClick] = useState(false);
@@ -33,6 +42,8 @@ function Navbar() {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
+                {/*   <FaUserTie className="nav-icon" />
+                  <FaUserFriends className="nav-icon" /> */}
                   <FaHome className="nav-icon" />
                   <span className="nav-text">Home</span>
                 </NavLink>
@@ -50,7 +61,7 @@ function Navbar() {
               </li>
               <li className="nav-item">
                 <NavLink
-                  to="/contact"
+                  to="/Search"
                   activeClassName="activated"
                   className="nav-links"
                   onClick={closeMobileMenu}

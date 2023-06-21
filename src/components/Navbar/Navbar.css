@@ -2,30 +2,30 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: #000; 
-  
+  color: #000;
 }
-/* ... autres styles ... */
 
 .nav-links {
-    color: #000;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    padding: 0.5rem 0.5rem;
-    height: 100%;
-  }
-  
-  .nav-icon {
-    margin-right: 0.4rem;
-  }
-  
-  .nav-text {
-    margin-left: 0.4rem;
-  }
-  
-  /* ... autres styles ... */
-  
+  color: #000;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem;
+  height: 100%;
+}
+
+.nav-icon {
+  margin-right: 0.4rem;
+}
+
+.nav-text {
+  margin-left: 0.4rem;
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+} 
+
 .navbar {
   height: 80px;
   display: flex;
@@ -68,7 +68,7 @@
 
 .navbar-icon {
   margin-right: 0.5rem;
-  width: 4rem ; 
+  width: 4rem;
   height: 3rem;
 }
 
@@ -99,7 +99,7 @@
   height: 100%;
 }
 
-.activated {
+.activated {  
   color: #7f85b5;
 }
 
@@ -148,14 +148,7 @@
     transition: all 0.3s ease;
   }
 
-  .nav-item:hover {
-    border: none;
-  }
-
-  .nav-item {
-    width: 100%;
-  }
-
+ 
   .navbar-logo {
     position: absolute;
     top: 0;
@@ -172,16 +165,16 @@
     font-size: 1.8rem;
     cursor: pointer;
   }
+
   @media screen and (max-width: 768px) {
-    /* Réduisez les dimensions du logo pour les écrans de largeur maximale de 768px */
     .navbar-icon {
       width: 50px;
       height: 35px;
     }
   }
 
+  
   @media screen and (max-width: 480px) {
-    /* Réduisez les dimensions du logo pour les écrans de largeur maximale de 480px */
     .navbar-icon {
       width: 30px;
       height: 20px;

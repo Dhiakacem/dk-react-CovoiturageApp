@@ -1,0 +1,59 @@
+.Search-container {
+  background-color: #dadada62;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
+}
+.containers {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input-container {
+  position: relative;
+}
+
+.input-container input[type="text"],
+.input-container input[type="date"],
+.input-container input[type="person"] {
+  padding: 10px 40px 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.input-container input[type="text"]::placeholder,
+.input-container input[type="date"]::placeholder,
+.input-container input[type="person"]::placeholder {
+  color: #999;
+}
+
+.input-container .input-icon {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+}
+
+.button {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

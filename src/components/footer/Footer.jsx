@@ -1,12 +1,40 @@
-import React from 'react';
-import './Footer.css'
+import React from "react";
+import "./Footer.css";
+import logo from "./logo.png";
 
 const Footer = () => {
   return (
-    <div className="footer">
-      <div className="fText">Copyright © 2023. Veo Worldwide Services</div>
-    </div>
-  )
-}
+    <footer className="footer">
+      <div className="footer-container">
+     
+          <img src={logo} alt="Logo" className="footer-logo-img" />
+     
+        
+        <div className="footer-section">
+          <h3 className="footer-heading">Nos services</h3>
+          <ul className="footer-links">
+            <li className="footer-link">Covoiturage régulier</li>
+            <li className="footer-link">Covoiturage occasionnel</li>
+          </ul>
+        </div>
+        <div className="footer-section">
+          <h3 className="footer-heading">Comment ça marche</h3>
+          <ul className="footer-links">
+            <li className="footer-link">Trouver un trajet</li>
+            <li className="footer-link">Réserver un trajet</li>
+            <li className="footer-link">Proposer un trajet</li>
+          </ul>
+        </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="footer-text">
+          Copyright © 2023. Veo Worldwide Services{" "}
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-export default Footer
+export default Footer;
+
+ 

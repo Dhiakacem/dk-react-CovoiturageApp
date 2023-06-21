@@ -7,7 +7,6 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./Header.css";
 import { useState } from "react";
-import { format } from "date-fns";
 import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -100,7 +99,6 @@ const Header = ({ type }) => {
                         min={0}
                         value={numHommes}
                         onChange={handleNumHommesChange}
-                          
                       />
                     </div>
                   </div>

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Proprity.css";
-import logo from "./bla.png";
-
+import logo from "./search.svg";
 
 const Proprity = () => {
   return (
@@ -12,11 +11,13 @@ const Proprity = () => {
         </div>
         <div className="imageTextContent">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Voluptatibus, ipsum voluptates? Ut iure delectus, corporis molestias
-            autem natus sunt iusto exercitationem voluptates a perferendis
+            Join our carpooling community today and make a positive impact on
+            your daily commute. Together, we can create a more sustainable and
+            connected world while enjoying the benefits of cost savings, reduced
+            stress, and social connections. Start carpooling with us and
+            experience a smarter way to travel.
           </p>
-        </div>  
+        </div>
       </div>
     </div>
   );
