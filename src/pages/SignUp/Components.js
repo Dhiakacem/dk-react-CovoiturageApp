@@ -1,11 +1,9 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 100px 100px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-  overflow: hidden;
   width: 678px;
   height: 200px;
   max-width: 100%;
@@ -14,7 +12,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
+  position: relative;
+ 
 `;
+
 
 export const SignUpContainer = styled.div`
   position: absolute;

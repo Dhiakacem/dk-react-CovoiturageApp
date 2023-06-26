@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-
 import {
   FaBars,
   FaTimes,
   FaHome,
   FaSearch,
-  FaCar,
-  FaUser,
-  FaUserTie,
-  FaUserFriends,
+  FaUserCircle,
 } from "react-icons/fa";
+import { MdAddCircle } from "react-icons/md";
 import { IconContext } from "react-icons/lib";
 import { NavLink } from "react-router-dom";
 import logo from "./logo.png";
@@ -42,7 +39,7 @@ function Navbar() {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                {/*   <FaUserTie className="nav-icon" />
+                  {/*   <FaUserTie className="nav-icon" />
                   <FaUserFriends className="nav-icon" /> */}
                   <FaHome className="nav-icon" />
                   <span className="nav-text">Home</span>
@@ -55,8 +52,8 @@ function Navbar() {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  <FaCar className="nav-icon" />
-                  <span className="nav-text">Covoiturage</span>
+                  <MdAddCircle className="nav-icon" />
+                  <span className="nav-text">Add Trip</span>
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -67,7 +64,7 @@ function Navbar() {
                   onClick={closeMobileMenu}
                 >
                   <FaSearch className="nav-icon" />
-                  <span className="nav-text">Recherche</span>
+                  <span className="nav-text">Search</span>
                 </NavLink>
               </li>
               <li className="nav-item2">
@@ -77,7 +74,7 @@ function Navbar() {
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  <FaUser className="nav-icon" />
+                  <FaUserCircle className="nav-icon2" />
                 </NavLink>
               </li>
             </ul>

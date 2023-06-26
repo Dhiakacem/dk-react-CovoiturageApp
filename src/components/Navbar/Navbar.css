@@ -17,7 +17,13 @@
 .nav-icon {
   margin-right: 0.4rem;
 }
+.nav-icon2 {
+  margin-right: 0.4rem;
+  width: 35px;
+  height: 100px;
+  color: #283482;
 
+}
 .nav-text {
   margin-left: 0.4rem;
   font-size: 16px;

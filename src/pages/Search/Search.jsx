@@ -1,7 +1,6 @@
 import React from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import Header from "../../components/header/Header";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import SocialLinks from "../../components/SocialLinks/SocialLinks";
 

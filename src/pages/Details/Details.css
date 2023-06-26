@@ -1,0 +1,214 @@
+.profiles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+.profile-content {
+  background-color: white;
+  width: 600px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  height: 60vh;
+  border-radius: 20px;
+  margin-left: 80px;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-profile-info {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.profile-info {
+  margin-bottom: 8px;
+}
+
+.profile-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.profile-content {
+  background-color: white;
+  width: 600px;
+  padding: 30px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: width 0.3s ease;
+  height: 60vh;
+  margin-top: 10px;
+  border-radius: 20px;
+  margin-left: 80px;
+}
+
+.profile-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sidebar-profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar-profile-img:hover {
+  transform: scale(1.1);
+}
+
+.sidebar-profile-info {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.profile-info {
+  margin-bottom: 8px;
+}
+
+.profile-description {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* Animation */
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.profile-content {
+  animation: slideInFromLeft 0.7s ease;
+}
+.rating-container {
+  background-color: #bdbdbd62;
+  padding: 20px;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.rating-container:hover {
+  transform: scale(1.01);
+}
+
+.titre {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: -webkit-linear-gradient(to right, #1f2075, #81bc01);
+  background-image: linear-gradient(to right, #1f2075, #81bc01);
+  font-size: 1.6rem;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  align-self: center;
+}
+
+.Rate-container {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 80%;
+  overflow-x: auto;
+}
+
+.rate-profile {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.rate {
+  position: relative;
+  background-color: #fff;
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  overflow: hidden;
+  margin-right: 15px; /* Add margin-right for spacing between cards */
+}
+
+.rate:hover {
+  box-shadow: 0 4px 4px #81bc01, 2px 6px 10px #283482;
+}
+.rate.position-1 {
+  border-color: #ffd700;
+}
+.edit-icon {
+  margin-top: 60px;
+  margin-left: 520px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  align-self: flex-end;
+  flex-direction: column;
+}
+
+.title-s {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.fade-out-title {
+  opacity: 1;
+  color: #81bc01;
+  font-size: 28px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #81bc01;
+}

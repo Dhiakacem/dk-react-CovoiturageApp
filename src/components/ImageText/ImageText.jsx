@@ -8,7 +8,7 @@ const ImageText = () => {
     <div className="imageTextContainer">
       <div className="imageTextGrid">
         <div className="imageTextImageContainer">
-          <img src={logo} alt="Image" className="imageTextImage" />
+          <img src={logo} alt="back" className="imageTextImage" />
         </div>
         <div className="imageTextContent">
           <p>
@@ -31,7 +31,7 @@ const ImageText = () => {
           </p>
         </div>
         <div className="imageTextContent">
-          <img src={second} alt="Image" className="imageTextImage" />
+          <img src={second} alt="back" className="imageTextImage" />
         </div>
       </div>
     </div>

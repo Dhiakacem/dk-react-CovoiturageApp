@@ -1,13 +1,13 @@
 import React from "react";
 import "./Proprity.css";
-import logo from "./search.svg";
+import logo from "./cars.jpg";
 
 const Proprity = () => {
   return (
     <div className="imageTextContainer">
       <div className="imageTextGrid">
         <div className="imageTextImageContainer">
-          <img src={logo} alt="Image" className="imageTextImage" />
+          <img src={logo} alt="back" className="imageTextImage" />
         </div>
         <div className="imageTextContent">
           <p>

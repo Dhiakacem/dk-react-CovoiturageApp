@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { FaUser } from "react-icons/fa";
+import {
+  faArrowAltCircleRight,
+  faCalendarDays,
+  faCar,
+  faPerson,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import "./SearchBar.css";
 
 function SearchBar() {
@@ -23,17 +30,23 @@ function SearchBar() {
       <div className="containers">
         <form className="search-form">
           <div className="input-container">
+            <FontAwesomeIcon
+              icon={faArrowAltCircleRight}
+              className="input-icon"
+            />
             <input type="text" placeholder="From" name="from" required />
-            <FaUser className="input-icon" />
           </div>
           <div className="input-container">
+            <FontAwesomeIcon icon={faCar} className="input-icon" />
+
             <input type="text" placeholder="To" name="to" required />
-            <FaUser className="input-icon" />
           </div>
           <div className="input-container">
+            <FontAwesomeIcon icon={faCalendarDays} className="input-icon" />
+
             <input type="date" placeholder="Date" name="date" required />
-            <FaUser className="input-icon" />
           </div>
+          <FontAwesomeIcon icon={faPerson} className="input-icon" />
           <div className="input-container">
             <input
               type="number"
@@ -45,13 +58,14 @@ function SearchBar() {
               onChange={handlePersonChange}
               required
             />
-            <FaUser className="input-icon" />
           </div>
-          <button type="submit" className="button">Search</button>
+          <div className="headerSearchItem">
+            <button className="headerBtn">Search</button>
+          </div>
         </form>
       </div>
     </div>
-  ); 
+  );
 }
 
 export default SearchBar;

@@ -1,8 +1,7 @@
 import React from "react";
 import {  FaLinkedin } from "react-icons/fa";
 import {  RiInstagramFill } from "react-icons/ri";
-import { FaFacebookF , FaInstagram } from "react-icons/fa";
-import { BsFillPersonLinesFill } from "react-icons/bs";
+import { FaFacebookF  } from "react-icons/fa";
 import "./SocialLinks.css";
 
 const SocialLinks = () => {

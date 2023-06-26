@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import * as Components from "./Components";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [signIn, setSignIn] = useState(true);

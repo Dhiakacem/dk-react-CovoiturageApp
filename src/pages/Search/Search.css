@@ -1,0 +1,12 @@
+.title {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: -webkit-linear-gradient(to right, #1F2075, #81BC01);
+    background-image: linear-gradient(to right, #1F2075, #81BC01);
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    align-self: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+  }

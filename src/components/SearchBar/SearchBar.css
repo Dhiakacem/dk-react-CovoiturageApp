@@ -1,6 +1,7 @@
 .Search-container {
+  margin-top: 20px;
   background-color: #dadada62;
-  padding: 50px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
