@@ -48,8 +48,7 @@
 }
 
 .cards:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 4px #81BC01, 2px 6px 10px #283482;
+  box-shadow: 0 4px 4px rgb(238, 219, 112);
 }
 
 /*   .card-number {
@@ -104,8 +103,9 @@
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url(stars.png); /* Replace with your star icon */
+  background-image: url(starfill.png); /* Replace with your star icon */
   background-size: cover;
+  margin-right: 2px;
 }
 
 .star.filled {
@@ -131,10 +131,10 @@
 
 .medal {
   position: absolute;
-  top: -5px;
-  left: -8px;
-  width: 35px;
-  height: 35px;
+  top: 3px;
+  right: 5px;
+  width: 30px;
+  height: 30px;
   
 }
 

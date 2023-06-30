@@ -4,6 +4,9 @@ import Footer from "../../components/footer/Footer";
 import "./Profile.css";
 import profileImage from "../../assets/Profile-image.png";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Profile = () => {
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -14,7 +17,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
-    navigate("/Profile"); // Replace "/Profil" with the actual path of your profile page
+    // Replace "/Profil" with the actual path of your profile page
   };
 
   const handleNameChange = (event) => {
@@ -33,13 +36,33 @@ const Profile = () => {
     setPassword(event.target.value);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     setName("");
     setLastName("");
     setPhone("");
     setPassword("");
+
+    try {
+      await toast.promise(saveProfile(), {
+        pending: "Saving profile...",
+        success: "Profile saved successfully!",
+        error: "Failed to save profile.",
+      });
+    } catch (error) {
+      console.log("Failed to save profile:", error);
+    }
+  };
+
+  const saveProfile = () => {
+    // Simulating an asynchronous operation
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        // Simulating a successful save
+        resolve();
+      }, 2000);
+    });
   };
 
   useEffect(() => {
@@ -143,11 +166,12 @@ const Profile = () => {
               <button
                 type="submit"
                 className="form-button return-button"
-                onClick={handleEdit}
+                onClick={handleSubmit}
               >
                 Save
               </button>
             </div>
+            <ToastContainer />
           </form>
         </div>
       </div>

@@ -1,87 +1,60 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import {
-  FaBars,
-  FaTimes,
-  FaHome,
-  FaSearch,
-  FaUserCircle,
-} from "react-icons/fa";
-import { MdAddCircle } from "react-icons/md";
-import { IconContext } from "react-icons/lib";
-import { NavLink } from "react-router-dom";
+import { FaSignOutAlt, FaHome, FaPlus, FaSearch, FaUser } from "react-icons/fa";
 import logo from "./logo.png";
 
 function Navbar() {
-  const [click, setClick] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
-  const handleClick = () => setClick(!click);
-  const closeMobileMenu = () => setClick(false);
+  const toggleNavbar = () => {
+    setIsOpen(!isOpen);
+  };
 
   return (
-    <>
-      <IconContext.Provider value={{ color: "#fff" }}>
-        <nav className="navbar">
-          <div className="navbar-container container">
-            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
-              <img alt="" src={logo} className="navbar-icon" />
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo">
+          <img alt="" src={logo} className="navbar-icon" />
+        </Link>
+        <div className={`navbar-menu ${isOpen ? "open" : ""}`}>
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link to="/" className="nav-link" onClick={toggleNavbar}>
+                <FaHome className="nav-icon" />
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/Offer" className="nav-link" onClick={toggleNavbar}>
+                <FaPlus className="nav-icon" />
+                Add Trip
+              </Link>
+            </li>{" "}
+            <li className="nav-item">
+              <Link to="/Profile" className="nav-link" onClick={toggleNavbar}>
+                <FaUser className="nav-icon" />
+                Profile
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div className="navbar-icons-container">
+          <div className="navbar-icons">
+            <Link to="/Search" className="nav-link" onClick={toggleNavbar}>
+              <FaSearch className="nav-icon" />
+              Search
             </Link>
-            <div className="menu-icon" onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
-            </div>
-            <ul className={click ? "nav-menu active" : "nav-menu"}>
-              <li className="nav-item">
-                <NavLink
-                  exact
-                  to="/"
-                  activeClassName="activated"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  {/*   <FaUserTie className="nav-icon" />
-                  <FaUserFriends className="nav-icon" /> */}
-                  <FaHome className="nav-icon" />
-                  <span className="nav-text">Home</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/about"
-                  activeClassName="activated"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  <MdAddCircle className="nav-icon" />
-                  <span className="nav-text">Add Trip</span>
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink
-                  to="/Search"
-                  activeClassName="activated"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  <FaSearch className="nav-icon" />
-                  <span className="nav-text">Search</span>
-                </NavLink>
-              </li>
-              <li className="nav-item2">
-                <NavLink
-                  to="/SignUp"
-                  activeClassName="activated"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  <FaUserCircle className="nav-icon2" />
-                </NavLink>
-              </li>
-            </ul>
+            <Link to="/SignUp" className="nav-link" onClick={toggleNavbar}>
+              <FaSignOutAlt className="icon" />
+            </Link>
           </div>
-        </nav>
-      </IconContext.Provider>
-    </>
+        </div>
+        {/*   <div className="navbar-toggle" onClick={toggleNavbar}>
+          <span className={`toggle-icon ${isOpen ? "open" : ""}`}></span>
+        </div> */}
+      </div>
+    </nav>
   );
 }
 

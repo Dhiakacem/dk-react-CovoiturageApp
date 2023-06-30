@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import profileImage from "../../assets/Profile-image.png";
@@ -20,7 +20,6 @@ const Details = () => {
     description: "Travel enthusiast from New York",
     rating: 4.5,
   };
-
 
   const renderStars = (rating) => {
     const filledStars = Math.floor(rating);
@@ -44,9 +43,18 @@ const Details = () => {
       <Navbar />
       <SocialLinks />
       <div className="title-s">
-      <h1 className="fade-out-title">Welcome back</h1>
+        <h1 className="fade-out-title">Welcome back</h1>
         <div className="profiles">
           <div className="profile-content">
+            <div className="edit-icon">
+              <NavLink
+                to="/edit"
+                activeClassName="activated"
+                className="nav-links"
+              >
+                <FaUserEdit className="nav-icon" />
+              </NavLink>
+            </div>
             <h2 className="profile-title">User Profile</h2>
 
             <div className="sidebar-profile">
@@ -66,15 +74,6 @@ const Details = () => {
               eros at erat suscipit condimentum. Integer consequat ex non turpis
               iaculis dapibus.
             </p>
-            <div className="edit-icon">
-              <NavLink
-                to="/edit"
-                activeClassName="activated"
-                className="nav-links"
-              >
-                <FaUserEdit className="nav-icon2" />
-              </NavLink>
-            </div>
           </div>
 
           <div className="rating-container">
@@ -94,7 +93,7 @@ const Details = () => {
           </div>
         </div>{" "}
       </div>
-      <Trajet/>
+      <Trajet />
       <Footer />
     </>
   );

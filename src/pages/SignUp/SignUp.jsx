@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import * as Components from "./Components";
 import { useNavigate } from "react-router-dom";
+import './SignUp.css'
 
 const SignUp = () => {
   const [signIn, setSignIn] = useState(true);
@@ -18,7 +19,7 @@ const SignUp = () => {
   };
  
   return (
-    <div className="body">
+
       <Components.Container>
         <Components.SignUpContainer signinIn={signIn}>
           <Components.Form>
@@ -65,7 +66,7 @@ const SignUp = () => {
           </Components.Overlay>
         </Components.OverlayContainer>
       </Components.Container>
-    </div>
+
   );
 };
 

@@ -11,21 +11,21 @@ const Tags = () => {
       name: "John",
       Lastname: "Doe",
       description: "Travel enthusiast from New York",
-      rating: 4.5,
+      rating: 4.8,
     },
     {
       id: 2,
       name: "Loeem",
       Lastname: "ipsum",
       description: "Travel enthusiast from New York",
-      rating: 3.8,
+      rating: 4.0,
     },
     {
       id: 3,
       name: "John",
       Lastname: "Doe",
       description: "Travel enthusiast from New York",
-      rating: 4.2,
+      rating: 3.2 ,
     },
   ];
 
@@ -69,11 +69,11 @@ const Tags = () => {
                 <img src={bronzeMedalIcon} alt="Bronze Medal" />
               </div>
             )}
-          {/*   <span className="card-number">{index + 1}</span> */}
+            {/*   <span className="card-number">{index + 1}</span> */}
             <div className="user-profile">
               <div className="username">
                 {card.name}
-                <div >{card.Lastname}</div>
+                <div>{card.Lastname}</div>
               </div>
             </div>
             <div className="description">{card.description}</div>
@@ -85,4 +85,4 @@ const Tags = () => {
   );
 };
 
-export default Tags;  
+export default Tags;

@@ -1,0 +1,46 @@
+.sidebars {
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    width: 300px; /* Set width of the sidebar */
+  }
+  
+  .sidebar-heading {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .menu {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .menu-item {
+    margin-bottom: 15px; /* Increase spacing between menu items */
+  }
+  
+  .menu-item label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add spacing between label and input */
+  }
+  
+  .menu-item input[type="radio"],
+  .menu-item input[type="checkbox"] {
+    margin-left: 100px; /* Add spacing between label and input */
+    
+  }
+  
+  .sub-menu-heading {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px; /* Add spacing between sub-menu headings */
+  }
+  
+  .sub-menu-item {
+    margin-bottom: 5px; /* Increase spacing between sub-menu items */
+  }
+  
+  .sub-menu-icon {
+    margin-right: 5px; /* Add margin between icon and text */
+  }
+  

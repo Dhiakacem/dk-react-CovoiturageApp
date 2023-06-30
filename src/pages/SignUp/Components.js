@@ -2,20 +2,18 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   background-color: #fff;
-  border-radius: 20px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  border-radius: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
   width: 678px;
-  height: 200px;
-  max-width: 100%;
-  min-height: 420px;
+  height: 420px;
+  margin: auto;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: "Montserrat", sans-serif;
   position: relative;
- 
 `;
-
 
 export const SignUpContainer = styled.div`
   position: absolute;

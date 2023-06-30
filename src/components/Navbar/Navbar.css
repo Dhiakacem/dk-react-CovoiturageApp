@@ -1,65 +1,14 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  color: #000;
-}
-
-.nav-links {
-  color: #000;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 0.5rem;
-  height: 100%;
-}
-
-.nav-icon {
-  margin-right: 0.4rem;
-}
-.nav-icon2 {
-  margin-right: 0.4rem;
-  width: 35px;
-  height: 100px;
-  color: #283482;
-
-}
-.nav-text {
-  margin-left: 0.4rem;
-  font-size: 16px;
-  font-family: "Poppins", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-} 
-
 .navbar {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.2rem;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  color: black;
-  margin-bottom: 0;
-  position: relative;
+  background-color: white;
+  padding: 11px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 3px;
 }
 
 .navbar-container {
   display: flex;
   justify-content: space-between;
-  height: 80px;
-}
-
-.container {
-  z-index: 1;
-  width: 100%;
-  max-width: 1300px;
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 50px;
-  padding-left: 50px;
+  align-items: center;
 }
 
 .navbar-logo {
@@ -70,6 +19,26 @@
   font-size: 2rem;
   display: flex;
   align-items: center;
+
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+.navbar-icons-container {
+  display: flex;
+  align-items: center;
+}
+.nav-icon {
+  margin-right: 0.5rem;
+}
+
+.icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #333;
 }
 
 .navbar-icon {
@@ -77,113 +46,78 @@
   width: 4rem;
   height: 3rem;
 }
-
-.nav-menu {
+.navbar-menu {
   display: flex;
   align-items: center;
-  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.navbar-menu.open {
+  transform: translateX(0%);
+}
+
+.navbar-nav {
+  display: flex;
   list-style: none;
-  text-align: center;
-  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-item {
-  height: 80px;
-  border-bottom: 2px solid transparent;
+  margin-right: 20px;
 }
 
-.nav-item:hover {
-  border-bottom: 2px solid #7f85b5;
+.nav-link {
+  text-decoration: none;
+  color: #333;
 }
 
-.nav-links {
-  color: #000;
+.nav-link:hover {
+  color: #666;
+}
+
+.navbar-icons {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  height: 100%;
 }
 
-.activated {  
-  color: #7f85b5;
+.icon {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #333;
 }
 
-.fa-bars {
-  color: #7f85b5;
+.navbar-toggle {
+  cursor: pointer;
 }
 
-.menu-icon {
-  display: none;
+.toggle-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: transform 0.3s ease-in-out;
 }
 
-@media screen and (max-width: 960px) {
-  .NavbarItems {
-    position: relative;
-  }
+.toggle-icon.open {
+  transform: rotate(45deg);
+}
 
-  .nav-menu {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    position: absolute;
-    top: 80px;
-    left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
-  }
+.toggle-icon.open:before,
+.toggle-icon.open:after {
+  content: "";
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+}
 
-  .nav-menu.active {
-    background: #fff;
-    left: 0;
-    opacity: 1;
-    transition: all 0.6s ease;
-    z-index: 1;
-  }
+.toggle-icon.open:before {
+  transform: translateY(-8px) rotate(90deg);
+}
 
-  .nav-links {
-    text-align: center;
-    padding: 2rem;
-    width: 100%;
-    display: table;
-  }
-
-  .nav-links:hover {
-    color: #7f85b5;
-    transform: scale(1.2);
-    transition: all 0.3s ease;
-  }
-
- 
-  .navbar-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(25%, 50%);
-  }
-
-  .menu-icon {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-  }
-
-  @media screen and (max-width: 768px) {
-    .navbar-icon {
-      width: 50px;
-      height: 35px;
-    }
-  }
-
-  
-  @media screen and (max-width: 480px) {
-    .navbar-icon {
-      width: 30px;
-      height: 20px;
-    }
-  }
+.toggle-icon.open:after {
+  transform: translateY(8px) rotate(90deg);
 }

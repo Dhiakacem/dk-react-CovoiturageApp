@@ -13,7 +13,7 @@ const Header = ({ type }) => {
   const handlePersonChange = (e) => {
     let count = parseInt(e.target.value);
     if (isNaN(count)) {
-      count = 0;
+      count = "";
     } else if (count < 0) {
       count = 0;
     } else if (count > 4) {
@@ -41,7 +41,7 @@ const Header = ({ type }) => {
             type="number"
             placeholder="Personnes"
             name="person"
-            min="0"
+            min=" "
             max="4"
             required
           />
