@@ -8,6 +8,7 @@ import Search from "./pages/Search/Search";
 import Details from "./pages/Details/Details";
 import Rating from "./pages/Rating/Rating";
 import Offer from "./pages/Offer/Offer";
+import Carpooling from "./pages/Carpooling/Carpooling";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/Profile" element={<Details />} />
         <Route path="/Rating" element={<Rating />} />
         <Route path="/Offer" element={<Offer />} />
+        <Route path="/Test" element={<Carpooling />} />
       </Routes>
     </BrowserRouter>
   );

@@ -17,7 +17,7 @@ const Details = () => {
     id: 1,
     name: "John",
     Lastname: "Doe",
-    description: "Travel enthusiast from New York",
+    description: "Passionné de voyage de New York",
     rating: 4.5,
   };
 
@@ -43,7 +43,7 @@ const Details = () => {
       <Navbar />
       <SocialLinks />
       <div className="title-s">
-        <h1 className="fade-out-title">Welcome back</h1>
+        <h1 className="fade-out-title">Bienvenue</h1>
         <div className="profiles">
           <div className="profile-content">
             <div className="edit-icon">
@@ -55,7 +55,7 @@ const Details = () => {
                 <FaUserEdit className="nav-icon" />
               </NavLink>
             </div>
-            <h2 className="profile-title">User Profile</h2>
+            <h2 className="profile-title">Profil Utilisateur</h2>
 
             <div className="sidebar-profile">
               <img
@@ -64,9 +64,9 @@ const Details = () => {
                 className="sidebar-profile-img"
               />
               <div className="sidebar-profile-info">
-                <p className="profile-info">Name: {name}</p>
-                <p className="profile-info">Last Name: {lastName}</p>
-                <p className="profile-info">Phone: {phone}</p>
+                <p className="profile-info">Nom : {name}</p>
+                <p className="profile-info">Nom de famille : {lastName}</p>
+                <p className="profile-info">Téléphone : {phone}</p>
               </div>
             </div>
             <p className="profile-description">
@@ -77,7 +77,7 @@ const Details = () => {
           </div>
 
           <div className="rating-container">
-            <h3 className="titre">Your Rating...</h3>
+            <h3 className="titre">Votre évaluation...</h3>
             <div className="Rate-container">
               <div className="rate position-1" key={card.id}>
                 <div className="rate-profile">

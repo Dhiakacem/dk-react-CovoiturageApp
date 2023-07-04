@@ -1,0 +1,120 @@
+.CarContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+h2 {
+  font-size: 32px;
+  font-family: "Poppins" , serif;
+  font-weight: 500;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.Carcard {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 45%;
+}
+
+.cardicon {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.middle-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+    margin-bottom: 18px;
+    width: 400px;
+  }
+  
+  .line-label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  .CarLine{
+    border: 2px solid #cccccca2;
+    width: 410px;
+  }
+  .line-price {
+    font-size: 1.2rem;
+  }
+  .CenterPrice{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+.carddetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardinfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.cardinfoicon {
+  margin-right: 10px;
+}
+
+.profileinfo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profileicon {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.profiletext {
+  display: flex;
+  flex-direction: column;
+}
+
+.profilename {
+  font-weight: bold;
+}
+
+.profilerating {
+  display: flex;
+}
+
+.Carstar {
+  color: #fbc02d;
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.star.half {
+  color: #c0c0c0;
+}
+
+.validerbutton {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #1f2075;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+.validerbutton:hover {
+  background-color: #81bc01;
+}

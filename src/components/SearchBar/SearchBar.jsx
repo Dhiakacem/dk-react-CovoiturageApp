@@ -26,7 +26,7 @@ function SearchBar() {
 
   return (
     <div className="Search-container">
-      <h3 className="title">Where are you going?</h3>
+      <h3 className="title">Où allez-vous ?</h3>
       <div className="containers">
         <form className="search-form">
           <div className="input-container">
@@ -34,23 +34,24 @@ function SearchBar() {
               icon={faArrowAltCircleRight}
               className="input-icon"
             />
-            <input type="text" placeholder="From" name="from" required />
+            <input type="text" placeholder="De" name="from" required />
           </div>
           <div className="input-container">
             <FontAwesomeIcon icon={faCar} className="input-icon" />
 
-            <input type="text" placeholder="To" name="to" required />
+            <input type="text" placeholder="À" name="to" required />
           </div>
           <div className="input-container">
             <FontAwesomeIcon icon={faCalendarDays} className="input-icon" />
 
             <input type="date" placeholder="Date" name="date" required />
           </div>
-          <FontAwesomeIcon icon={faPerson} className="input-icon" />
           <div className="input-container">
+            <FontAwesomeIcon icon={faPerson} className="input-icon" />
+
             <input
-              type="number"
-              placeholder="Person"
+              type="text"
+              placeholder="Personne"
               name="person"
               min="0"
               max="4"
@@ -60,7 +61,7 @@ function SearchBar() {
             />
           </div>
           <div className="headerSearchItem">
-            <button className="headerBtn">Search</button>
+            <button className="headerBtn">Rechercher</button>
           </div>
         </form>
       </div>

@@ -4,9 +4,10 @@ import {
   FaClock,
   FaStar,
   FaCar,
-  FaChair,
   FaSnowflake,
   FaSmoking,
+  FaDollarSign,
+  FaWalking,
 } from "react-icons/fa";
 
 const Sidebar = () => {
@@ -16,9 +17,18 @@ const Sidebar = () => {
     setSelectedOption(option);
   };
 
+  const handleClearAll = () => {
+    setSelectedOption(null);
+  };
+
   return (
-    <div className="sidebars">
-      <h2 className="sidebar-heading">Trier par</h2>
+    <div className="sidebara">
+      <h2 className="sidebar-heading">
+        Trier par
+        <button className="delete-all" onClick={handleClearAll}>
+          Tout effacer
+        </button>
+      </h2>
       <ul className="menu">
         <li
           className={`menu-item ${
@@ -26,7 +36,7 @@ const Sidebar = () => {
           }`}
         >
           <label>
-            Départ le plus tôt
+            <FaClock className="sub-menu-icon" /> Départ le plus tôt
             <input
               type="radio"
               name="sortOption"
@@ -42,8 +52,7 @@ const Sidebar = () => {
           }`}
         >
           <label>
-            {" "}
-            Prix le plus bas
+            <FaDollarSign className="sub-menu-icon" /> Prix le plus bas
             <input
               type="radio"
               name="sortOption"
@@ -59,8 +68,7 @@ const Sidebar = () => {
           }`}
         >
           <label>
-            {" "}
-            Proche du point de départ
+            <FaWalking className="top-menu-icon" /> Proche du point de départ
             <input
               type="radio"
               name="sortOption"
@@ -76,8 +84,7 @@ const Sidebar = () => {
           }`}
         >
           <label>
-            {" "}
-            Proche du point d’arrivée
+            <FaWalking className="top-menu-icon" /> Proche du point d'arrivée
             <input
               type="radio"
               name="sortOption"
@@ -87,24 +94,8 @@ const Sidebar = () => {
             />
           </label>
         </li>
-        <li
-          className={`menu-item ${
-            selectedOption === "shortestTrip" ? "selected" : ""
-          }`}
-        >
-          <label>
-            {" "}
-            Trajet le plus court
-            <input
-              type="radio"
-              name="sortOption"
-              value="shortestTrip"
-              checked={selectedOption === "shortestTrip"}
-              onChange={() => handleOptionChange("shortestTrip")}
-            />
-          </label>
-        </li>
         <li className="menu-item sub-menu-item">
+          <h3 className="line"></h3>
           <h3 className="sub-menu-heading">
             <FaClock className="sub-menu-icon" /> Heure de départ
           </h3>
@@ -115,7 +106,6 @@ const Sidebar = () => {
               }`}
             >
               <label>
-                {" "}
                 Avant 06:00
                 <input
                   type="checkbox"
@@ -131,7 +121,6 @@ const Sidebar = () => {
               }`}
             >
               <label>
-                {" "}
                 06:00 - 12:00
                 <input
                   type="checkbox"
@@ -147,7 +136,6 @@ const Sidebar = () => {
               }`}
             >
               <label>
-                {" "}
                 12:01 - 18:00
                 <input
                   type="checkbox"
@@ -175,8 +163,9 @@ const Sidebar = () => {
           </ul>
         </li>
         <li className="menu-item sub-menu-item">
+          <h3 className="line"></h3>
           <h3 className="sub-menu-heading">
-            <FaCar className="sub-menu-icon" /> Services et équipements
+            <FaCar className="sub-menu-icon" /> Services et Options
           </h3>
           <ul className="sub-menu">
             <li
@@ -185,8 +174,7 @@ const Sidebar = () => {
               }`}
             >
               <label>
-                {" "}
-                <FaStar className="sub-menu-icon" /> Super Driver
+                <FaStar className="star-menu-icon" /> Super Conducteur
                 <input
                   type="checkbox"
                   value="superDriver"
@@ -197,33 +185,14 @@ const Sidebar = () => {
             </li>
             <li
               className={`sub-menu-item ${
-                selectedOption === "rearSeats" ? "selected" : ""
-              }`}
-            >
-              <label>
-                {" "}
-                <FaChair className="sub-menu-icon" /> Max. 2 à l'arrière
-                <input
-                  type="checkbox"
-                  value="rearSeats"
-                  checked={selectedOption === "rearSeats"}
-                  onChange={() => handleOptionChange("rearSeats")}
-                />
-              </label>
-            </li>
-            <li
-              className={`sub-menu-item ${
                 selectedOption === "smokingAllowed" ? "selected" : ""
               }`}
             >
               <label>
-                {" "}
-                <FaSmoking className="sub-menu-icon" /> Cigarette autorisée
+                <FaSmoking className="sub-menu-icon" /> Fumeurs autorisés
                 <input
                   type="checkbox"
                   value="smokingAllowed"
-                  checked={selectedOption === "smokingAllowed"}
-                  onChange={() => handleOptionChange("smokingAllowed")}
                 />
               </label>
             </li>
@@ -233,14 +202,8 @@ const Sidebar = () => {
               }`}
             >
               <label>
-                {" "}
-                <FaSnowflake className="sub-menu-icon" /> Climatisation
-                <input
-                  type="checkbox"
-                  value="airConditioning"
-                  checked={selectedOption === "airConditioning"}
-                  onChange={() => handleOptionChange("airConditioning")}
-                />
+                <FaSnowflake className="cli-menu-icon" /> Climatisation
+                <input type="checkbox" value="airConditioning" />
               </label>
             </li>
           </ul>

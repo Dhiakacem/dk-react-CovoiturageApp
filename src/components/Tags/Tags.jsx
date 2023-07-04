@@ -8,76 +8,75 @@ const Tags = () => {
   const cards = [
     {
       id: 1,
-      name: "John",
-      Lastname: "Doe",
-      description: "Travel enthusiast from New York",
-      rating: 4.8,
+      nom: "John",
+      nomDeFamille: "Doe",
+      description: "Passionné de voyages de New York",
+      note: 4.8,
     },
     {
       id: 2,
-      name: "Loeem",
-      Lastname: "ipsum",
-      description: "Travel enthusiast from New York",
-      rating: 4.0,
+      nom: "Loeem",
+      nomDeFamille: "ipsum",
+      description: "Passionné de voyages de New York",
+      note: 4.0,
     },
     {
       id: 3,
-      name: "John",
-      Lastname: "Doe",
-      description: "Travel enthusiast from New York",
-      rating: 3.2 ,
+      nom: "John",
+      nomDeFamille: "Doe",
+      description: "Passionné de voyages de New York",
+      note: 3.2,
     },
   ];
 
-  const Mapcards = cards.slice(0, 3);
+  const cartesAffichees = cards.slice(0, 3);
 
-  const renderStars = (rating) => {
-    const filledStars = Math.floor(rating);
-    const hasHalfStar = rating % 1 !== 0;
+  const renderEtoiles = (note) => {
+    const etoilesRemplies = Math.floor(note);
+    const aDemiEtoile = note % 1 !== 0;
 
-    const stars = [];
+    const etoiles = [];
 
-    for (let i = 0; i < filledStars; i++) {
-      stars.push(<span key={i} className="star filled" />);
+    for (let i = 0; i < etoilesRemplies; i++) {
+      etoiles.push(<span key={i} className="etoile remplie" />);
     }
 
-    if (hasHalfStar) {
-      stars.push(<span key="half" className="star half" />);
+    if (aDemiEtoile) {
+      etoiles.push(<span key="moitie" className="etoile moitie" />);
     }
 
-    return stars;
+    return etoiles;
   };
 
   return (
-    <div className="main-container">
-      <h3 className="titre">Top 3 profiles this weekend</h3>
-      <div className="Tags-container">
-        {Mapcards.map((card, index) => (
-          <div className={`cards position-${index + 1}`} key={card.id}>
+    <div className="conteneur-principal">
+      <h3 className="title">Top 3 profils ce week-end</h3>
+      <div className="conteneur-tags">
+        {cartesAffichees.map((carte, index) => (
+          <div className={`carte position-${index + 1}`} key={carte.id}>
             {index === 0 && (
-              <div className="medal gold-medal">
-                <img src={goldMedalIcon} alt="Gold Medal" />
+              <div className="medaille medaille-or">
+                <img src={goldMedalIcon} alt="Médaille d'or" />
               </div>
             )}
             {index === 1 && (
-              <div className="medal silver-medal">
-                <img src={silverMedalIcon} alt="Silver Medal" />
+              <div className="medaille medaille-argent">
+                <img src={silverMedalIcon} alt="Médaille d'argent" />
               </div>
             )}
             {index === 2 && (
-              <div className="medal bronze-medal">
-                <img src={bronzeMedalIcon} alt="Bronze Medal" />
+              <div className="medaille medaille-bronze">
+                <img src={bronzeMedalIcon} alt="Médaille de bronze" />
               </div>
             )}
-            {/*   <span className="card-number">{index + 1}</span> */}
-            <div className="user-profile">
-              <div className="username">
-                {card.name}
-                <div>{card.Lastname}</div>
+            <div className="profil-utilisateur">
+              <div className="nom-utilisateur">
+                {carte.nom}
+                <div>{carte.nomDeFamille}</div>
               </div>
             </div>
-            <div className="description">{card.description}</div>
-            <div className="rating">{renderStars(card.rating)}</div>
+            <div className="description">{carte.description}</div>
+            <div className="note">{renderEtoiles(carte.note)}</div>
           </div>
         ))}
       </div>

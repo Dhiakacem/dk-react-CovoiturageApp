@@ -1,41 +1,47 @@
-.rating-page {
+.popup-overlay {
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
-.rates-container {
+.popup-content {
   width: 400px;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  animation: popupFadeIn 0.3s ease-in-out;
+  position: relative;
   background-color: #fff;
-  align-items: center;
 }
 
-.cart {
-  margin-bottom: 20px;
-}
-
-.titre {
+.popup-title {
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .stars {
   display: flex;
-  margin-bottom: 10px;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
-.star {
-  color: white;
+.stars .star {
+  color: #ccc;
   cursor: pointer;
   transition: color 0.2s;
 }
 
-.star:hover {
+.stars .star:hover {
   color: goldenrod;
 }
 
@@ -45,10 +51,11 @@
 }
 
 .comment {
-  height: 100px;
+  height: 50px;
   resize: vertical;
   padding: 5px;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .submit-button {
@@ -58,21 +65,42 @@
   border: none;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
 .submit-button:hover {
   background-color: #006666;
 }
 
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-icon {
+  color: #e40d0d;
+  font-size: 20px;
+}
+
+.close-icon:hover {
+  color: red;
+}
+
 .Toastify__toast {
   font-family: Arial, sans-serif;
   font-size: 14px;
   border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .Toastify__toast--success {
-  background-color: white;
-  color: green;
+  background-color: #fff;
+  color: #4caf50;
 }
 
 .Toastify__toast-body {

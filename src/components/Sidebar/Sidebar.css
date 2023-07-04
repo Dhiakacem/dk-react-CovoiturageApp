@@ -1,46 +1,161 @@
-.sidebars {
-    font-family: 'Arial', sans-serif;
-    padding: 20px;
-    width: 300px; /* Set width of the sidebar */
+.sidebara {
+  padding: 15px;
+  width: 320px;
+  height: 600px;
+  box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
+  margin-left: 200px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border-right: 3px solid #bbbbbb;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.sidebar-heading {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
+}
+
+.menu {
+  list-style-type: none;
+  padding: 0;
+}
+
+.menu-item {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.menu-item label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.menu-item input[type="radio"],
+.menu-item input[type="checkbox"] {
+  margin-left: 85px;
+  right: 980px;
+  position: absolute;
+  color: #34a853;
+  border-radius: 50%;
+  margin-left: 0;
+  margin-left: 20px;
+}
+
+.menu-item input[type="radio"] + label::before,
+.menu-item input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: 2px solid #34a853; /* Green border color */
+  border-radius: 50%;
+}
+
+.menu-item input[type="radio"]:checked + label::before,
+.menu-item input[type="checkbox"]:checked + label::before {
+  border-color: #34a853; /* Green border color */
+}
+
+.menu-item input[type="radio"]:checked + label::after,
+.menu-item input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%) scale(0);
+  width: 8px;
+  height: 8px;
+  background-color: #34a853; /* Green checkmark color */
+  border-radius: 50%;
+  transition: transform 0.2s ease-in-out;
+}
+
+.menu-item input[type="radio"]:checked + label::after,
+.menu-item input[type="checkbox"]:checked + label::after {
+  transform: translateY(-50%) scale(1);
+}
+.line {
+  border-top: 3px solid #ccc;
+}
+.sub-menu-heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+  margin-top: 10px; /* Line between H3 elements */
+}
+
+.sub-menu-item {
+  margin-bottom: 10px;
+}
+
+.sub-menu-icon {
+  margin-right: 10px;
+}
+.top-menu-icon {
+  margin-right: 10px;
+  color: #49bc01;
+}
+.star-menu-icon {
+  margin-right: 10px;
+  color: gold;
+}
+.cli-menu-icon {
+  margin-right: 10px;
+  color: #24a6af;
+}
+
+.sub-menu {
+  padding-left: 15px;
+}
+
+h3 {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.delete-all {
+  color: #1f2075; 
+  font-size: 14px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  right: 990px;
+  position: absolute;
+  margin-left: 10px;
+}
+
+.delete-all:hover {
+  color: #1f2075c4; /* Darker blue on hover */
+}
+
+@media only screen and (min-width: 768px) {
+  .sidebars {
+    margin-left: 80px;
   }
-  
-  .sidebar-heading {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .sidebars {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
   }
-  
-  .menu {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  .menu-item {
-    margin-bottom: 15px; /* Increase spacing between menu items */
-  }
-  
-  .menu-item label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px; /* Add spacing between label and input */
-  }
-  
-  .menu-item input[type="radio"],
-  .menu-item input[type="checkbox"] {
-    margin-left: 100px; /* Add spacing between label and input */
-    
-  }
-  
-  .sub-menu-heading {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px; /* Add spacing between sub-menu headings */
-  }
-  
-  .sub-menu-item {
-    margin-bottom: 5px; /* Increase spacing between sub-menu items */
-  }
-  
-  .sub-menu-icon {
-    margin-right: 5px; /* Add margin between icon and text */
-  }
-  
+}

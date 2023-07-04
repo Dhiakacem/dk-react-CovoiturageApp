@@ -11,11 +11,12 @@ const Proprity = () => {
         </div>
         <div className="imageTextContent">
           <p>
-            Join our carpooling community today and make a positive impact on
-            your daily commute. Together, we can create a more sustainable and
-            connected world while enjoying the benefits of cost savings, reduced
-            stress, and social connections. Start carpooling with us and
-            experience a smarter way to travel.
+            Rejoignez notre communauté de covoiturage dès aujourd'hui et ayez un
+            impact positif sur votre trajet quotidien. Ensemble, nous pouvons
+            créer un monde plus durable et connecté tout en bénéficiant
+            d'économies de coûts, d'une réduction du stress et de connexions
+            sociales. Commencez le covoiturage avec nous et découvrez un moyen
+            plus intelligent de voyager.
           </p>
         </div>
       </div>

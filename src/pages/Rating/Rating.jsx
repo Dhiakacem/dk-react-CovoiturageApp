@@ -1,12 +1,15 @@
 import React, { useState } from "react";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Popup from "reactjs-popup";
+import "reactjs-popup/dist/index.css";
 import "./Rating.css";
+import { FaStar, FaRegStar, FaTimes } from "react-icons/fa";
 
 const Rating = () => {
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
+  const [popupOpen, setPopupOpen] = useState(false);
 
   const handleRatingChange = (value) => {
     setRating(value);
@@ -19,16 +22,12 @@ const Rating = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform rating submission logic here
-    // You can access the selected rating through the 'rating' state variable
-    // and the comment through the 'comment' state variable
-
-    // Reset the form after submission if needed
     setRating(0);
     setComment("");
 
-    // Show toast notification
     toast.success("Rating submitted successfully!");
+
+    setPopupOpen(false);
   };
 
   const renderStars = () => {
@@ -40,7 +39,7 @@ const Rating = () => {
         starComponents.push(
           <FaStar
             key={i}
-            className="star"
+            className="stars"
             onClick={() => handleRatingChange(i)}
           />
         );
@@ -48,7 +47,7 @@ const Rating = () => {
         starComponents.push(
           <FaRegStar
             key={i}
-            className="star"
+            className="stars"
             onClick={() => handleRatingChange(i)}
           />
         );
@@ -60,9 +59,13 @@ const Rating = () => {
 
   return (
     <>
-      <div className="rates-container">
-        <div className="cart">
-          <h2 className="titre">Rate My Service</h2>
+      <button onClick={() => setPopupOpen(true)} className="popup-button">
+        Open Popup
+      </button>
+
+      <Popup open={popupOpen} onClose={() => setPopupOpen(false)} modal>
+        <div className="popup-content">
+          <h2 className="popup-title">Rate My Service</h2>
           <div className="stars">{renderStars()}</div>
           <form className="form" onSubmit={handleSubmit}>
             <textarea
@@ -74,10 +77,14 @@ const Rating = () => {
             <button type="submit" className="submit-button">
               Submit
             </button>
-            <ToastContainer />
           </form>
+          <button className="close-button" onClick={() => setPopupOpen(false)}>
+            <FaTimes className="close-icon" />
+          </button>
         </div>
-      </div>
+      </Popup>
+
+      <ToastContainer />
     </>
   );
 };

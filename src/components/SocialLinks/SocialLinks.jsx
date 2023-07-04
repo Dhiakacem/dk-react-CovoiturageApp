@@ -13,7 +13,7 @@ const SocialLinks = () => {
           LinkedIn <FaLinkedin size={20} className="linkedin-icon" />
         </>
       ),
-      href: "https://www.linkedin.com/company/veo-worldwide-services/mycompany/verification/",
+      href: "https://www.linkedin.com/company/veo-tunisie/",
       style: "rounded-tr-md",
     },
     {

@@ -17,7 +17,7 @@ const Profile = () => {
   const navigate = useNavigate();
 
   const handleEdit = () => {
-    // Replace "/Profil" with the actual path of your profile page
+    navigate("/profile");
   };
 
   const handleNameChange = (event) => {
@@ -77,14 +77,14 @@ const Profile = () => {
     <>
       <Navbar />
       <div className="title-container">
-        {showTitle && <h1 className="fade-out">Welcome back</h1>}
-        {!showTitle && <h1 className="fade-in">Check your profile</h1>}
+        {showTitle && <h1 className="fade-out">Bienvenue</h1>}
+        {!showTitle && <h1 className="fade-in">Consultez votre profil</h1>}
       </div>
       <div className="profile-container">
         <div className="main-content">
           <div className="sidebar">
             <div className="sidebar-content">
-              <h2>User Profile</h2>
+              <h2>Profil utilisateur</h2>
               <div className="sidebar-profile">
                 <img
                   src={profileImage}
@@ -93,13 +93,13 @@ const Profile = () => {
                 />
                 <div className="sidebar-profile-info">
                   <p>
-                    <strong>Name:</strong> {name}
+                    <strong>Nom :</strong> {name}
                   </p>
                   <p>
-                    <strong>Last Name:</strong> {lastName}
+                    <strong>Prénom :</strong> {lastName}
                   </p>
                   <p>
-                    <strong>Phone:</strong> {phone}
+                    <strong>Téléphone :</strong> {phone}
                   </p>
                 </div>
               </div>
@@ -112,45 +112,60 @@ const Profile = () => {
           </div>
           <form onSubmit={handleSubmit} className="edit-profile-form">
             <div className="form-group">
-              <label htmlFor="name">Name: </label>
-              <input
-                type="text"
-                id="name"
-                value={name}
-                onChange={handleNameChange}
-                className="form-input"
-              />
-
-              <label htmlFor="lastName">Last Name:</label>
-              <input
-                type="text"
-                id="lastName"
-                value={lastName}
-                onChange={handleLastNameChange}
-                className="form-input"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="phone">Phone:</label>
+              <label htmlFor="phone">Nom d'utilisateur :</label>
               <input
                 type="text"
                 id="phone"
                 value={phone}
                 onChange={handlePhoneChange}
                 className="form-input"
+                disabled
+              />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="form-label">Nom :</label>
+              <input
+                type="text"
+                id="name"
+                value={name}
+                onChange={handleNameChange}
+                className="form-input"
+                required
+              />
+
+              <label htmlFor="lastName">Prénom :</label>
+              <input
+                type="text"
+                id="lastName"
+                value={lastName}
+                onChange={handleLastNameChange}
+                className="form-input"
+                required
               />
             </div>
             <div className="form-group">
-              <label htmlFor="email">Email:</label>
+              <label htmlFor="phone">Téléphone :</label>
+              <input
+                type="text"
+                id="phone"
+                value={phone}
+                onChange={handlePhoneChange}
+                className="form-input"
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email :</label>
               <input
                 type="email"
                 id="email"
-                /* value={email}  */ disabled
+                /*  value={email}    */ disabled
                 className="form-input"
               />
             </div>
             <div className="form-group">
-              <label htmlFor="password">Password:</label>
+              <label htmlFor="password">Mot de passe :</label>
               <input
                 type="password"
                 id="password"
@@ -160,15 +175,19 @@ const Profile = () => {
               />
             </div>
             <div className="button-group">
-              <button type="submit" className="form-button save-button">
-                Return
+              <button
+                type="submit"
+                className="form-button save-button"
+                onClick={handleEdit}
+              >
+                Retour
               </button>
               <button
                 type="submit"
                 className="form-button return-button"
                 onClick={handleSubmit}
               >
-                Save
+                Enregistrer
               </button>
             </div>
             <ToastContainer />

@@ -1,13 +1,13 @@
-.main-container {
+.conteneur-principal {
   background-color: #bdbdbd62;
   padding: 20px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  }
+}
 
-.titre {
+.titres {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -20,7 +20,7 @@
   align-self: center;
 }
 
-.Tags-container {
+.conteneur-tags {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-around;
@@ -29,7 +29,7 @@
   overflow-x: auto;
 }
 
-.cards {
+.carte {
   position: relative;
   background-color: #fff;
   width: 100%;
@@ -44,24 +44,14 @@
   align-items: center;
   overflow: hidden;
   transition: transform 0.3s ease;
-  margin-right: 15px; /* Add margin-right for spacing between cards */
+  margin-right: 15px;
 }
 
-.cards:hover {
+.carte:hover {
   box-shadow: 0 4px 4px rgb(238, 219, 112);
 }
 
-/*   .card-number {
-  position: absolute;
-
-  background-color: #1F2075;
-  color: black;
-  font-weight: bold;
-  padding: 5px;
-  border-radius: 50%;
-} */
-
-.user-profile {
+.profil-utilisateur {
   margin-bottom: 10px;
   display: flex;
   align-items: center;
@@ -69,22 +59,12 @@
   width: 100%;
 }
 
-.user-icon {
-  margin-right: 10px;
-}
-
-.user-icon img {
-  width: 20px;
-  height: 21px;
-}
-
-
-.username {
+.nom-utilisateur {
   font-weight: bold;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-bottom: 3px; 
+  margin-bottom: 3px;
   margin-left: 25px;
   flex-direction: row;
   display: flex;
@@ -95,11 +75,11 @@
   text-align: center;
 }
 
-.rating {
+.note {
   margin-top: 10px;
 }
 
-.star {
+.etoile {
   display: inline-block;
   width: 20px;
   height: 20px;
@@ -108,47 +88,45 @@
   margin-right: 2px;
 }
 
-.star.filled {
+.remplie {
   background-position: 0 0;
 }
 
-.star.half {
+.moitie {
   background-position: -20px 0;
 }
 
-
-.cards.position-1 {
+.carte.position-1 {
   border-color: #ffd700;
 }
 
-.cards.position-2 {
+.carte.position-2 {
   border-color: silver;
 }
 
-.cards.position-3 {
+.carte.position-3 {
   border-color: #cd7f32;
 }
 
-.medal {
+.medaille {
   position: absolute;
   top: 3px;
   right: 5px;
   width: 30px;
   height: 30px;
-  
 }
 
-.gold-medal img {
+.medaille-or img {
   width: 100%;
   height: 100%;
 }
 
-.silver-medal img {
+.medaille-argent img {
   width: 100%;
   height: 100%;
 }
 
-.bronze-medal img {
+.medaille-bronze img {
   width: 100%;
   height: 100%;
 }

@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 import { FiMapPin, FiCalendar, FiClock, FiUsers } from "react-icons/fi";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Popup from "reactjs-popup";
 import "./Offer.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import GoogleMapsImage from "../../assets/google-maps-image.jpg";
+import { FaChair, FaSmoking, FaSnowflake } from "react-icons/fa";
 
 const Offer = () => {
   const [departure, setDeparture] = useState("");
@@ -15,7 +17,15 @@ const Offer = () => {
   const [departureTime, setDepartureTime] = useState("");
   const [persons, setPersons] = useState("");
   const [seatsAvailable, setSeatsAvailable] = useState(0);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [selectedOption, setSelectedOption] = useState("");
+
   const navigate = useNavigate();
+
+  const handlePopupOpen = (event) => {
+    event.preventDefault();
+    setPopupOpen(true);
+  };
 
   const handleNext = (event) => {
     event.preventDefault();
@@ -23,20 +33,33 @@ const Offer = () => {
     // Validate if departure and destination are set
     if (departure && destination && departureDate && departureTime && persons) {
       // Show a success toast notification
-      toast.success("Offer Seats successful!");
+      toast.success("Places offertes avec succès !");
 
       // Navigate to "/offer/settime" route
       navigate("/");
     } else {
       // Show an error toast notification
-      toast.error("Please fill all the inputs  ");
+      toast.error("Veuillez remplir tous les champs !");
     }
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    // Perform form submission logic here
+    // You can access the selected radio option through the 'selectedOption' state variable
+
+    // Show a success toast notification
+    toast.success("Formulaire soumis avec succès !");
+
+    // Close the popup
+    setPopupOpen(false);
   };
 
   return (
     <>
       <Navbar />
-      <h1 className="titres">Add Trip</h1>
+      <h1 className="titres">Ajouter un trajet</h1>
       <div className="offer-container">
         <div className="input-container">
           <div className="input-group">
@@ -45,7 +68,7 @@ const Offer = () => {
               type="text"
               value={departure}
               onChange={(event) => setDeparture(event.target.value)}
-              placeholder="Departure"
+              placeholder="Départ"
               className="form-input"
             />
           </div>
@@ -65,7 +88,7 @@ const Offer = () => {
               type="date"
               value={departureDate}
               onChange={(event) => setDepartureDate(event.target.value)}
-              placeholder="Departure Date"
+              placeholder="Date de départ"
               className="form-input"
             />
           </div>
@@ -75,7 +98,7 @@ const Offer = () => {
               type="time"
               value={departureTime}
               onChange={(event) => setDepartureTime(event.target.value)}
-              placeholder="Departure Time"
+              placeholder="Heure de départ"
               className="form-input"
             />
           </div>
@@ -85,12 +108,59 @@ const Offer = () => {
               type="number"
               value={persons}
               onChange={(event) => setPersons(event.target.value)}
-              placeholder="Person"
+              placeholder="Nombre de personnes"
               className="form-input"
             />
           </div>
+          <div className="input-group">
+            <button type="submit" className="hh" onClick={handlePopupOpen}>
+              Suivant
+            </button>
+          </div>
         </div>
-
+        <Popup open={popupOpen} onClose={() => setPopupOpen(false)} modal>
+          <div className="popup-content">
+            <h2 className="popup-title">Sélectionnez votre option</h2>
+            <form className="popup-form" onSubmit={handleSubmit}>
+              <div className="option">
+                <label>
+                  <input
+                    type="checkbox"
+                    value="option1"
+                    onChange={() => setSelectedOption("option1")}
+                  />
+                  <FaSnowflake className="option-icon" />
+                  <span className="option-label">Climatisation</span>
+                </label>
+              </div>
+              <div className="option">
+                <label>
+                  <input
+                    type="checkbox"
+                    value="option2"
+                    onChange={() => setSelectedOption("option2")}
+                  />
+                  <FaSmoking className="option-icon" />
+                  <span className="option-label">Fumeurs autorisés</span>
+                </label>
+              </div>
+              <div className="option">
+                <label>
+                  <input
+                    type="checkbox"
+                    value="option3"
+                    onChange={() => setSelectedOption("option3")}
+                  />
+                  <FaChair className="option-icon" />
+                  <span className="option-label">Max. 2 sièges arrière</span>
+                </label>
+              </div>
+              <button type="submit" className="submit-button">
+                Soumettre
+              </button>
+            </form>
+          </div>
+        </Popup>
         <div className="google-maps-image-container">
           <img
             src={GoogleMapsImage}
@@ -100,7 +170,7 @@ const Offer = () => {
         </div>
       </div>
       <button type="submit" className="OfferBtn" onClick={handleNext}>
-        Offer Seats
+        Ajouter
       </button>
       <ToastContainer />
       <Footer />

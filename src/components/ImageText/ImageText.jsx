@@ -8,30 +8,33 @@ const ImageText = () => {
     <div className="imageTextContainer">
       <div className="imageTextGrid">
         <div className="imageTextImageContainer">
-          <img src={logo} alt="back" className="imageTextImage" />
+          <img src={logo} alt="arrière" className="imageTextImage" />
         </div>
         <div className="imageTextContent">
           <p>
-            Welcome to our carpooling platform, where convenience meets
-            sustainability. Our website is dedicated to connecting individuals
-            who are looking to share rides, reduce their carbon footprint, and
-            save money on transportation expenses. Our platform provides user
-            profiles and ratings.
+            Bienvenue sur notre plateforme de covoiturage, où la commodité
+            rencontre la durabilité. Notre site web est dédié à la mise en
+            relation de personnes qui souhaitent partager des trajets, réduire
+            leur empreinte carbone et économiser de l'argent sur les frais de
+            transport. Notre plateforme propose des profils d'utilisateurs et
+            des évaluations.
           </p>
         </div>
       </div>
       <div className="imageTextGrid">
         <div className="imageTextImageContainer">
           <p>
-            Our website offers advanced search filters, allowing you to find
-            carpool partners based on your specific preferences. You can search
-            for rides based on your starting point, destination, and desired
-            departure. You can also specify your preferences for the number of
-            passengers, Air Condition preferences, and more.
+            Notre site web propose des filtres de recherche avancés, vous
+            permettant de trouver des partenaires de covoiturage en fonction de
+            vos préférences spécifiques. Vous pouvez rechercher des trajets en
+            fonction de votre point de départ, de votre destination et de
+            l'heure de départ souhaitée. Vous pouvez également spécifier vos
+            préférences pour le nombre de passagers, les préférences de
+            climatisation, et plus encore.
           </p>
         </div>
         <div className="imageTextContent">
-          <img src={second} alt="back" className="imageTextImage" />
+          <img src={second} alt="arrière" className="imageTextImage" />
         </div>
       </div>
     </div>

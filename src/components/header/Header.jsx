@@ -2,55 +2,61 @@ import {
   faArrowAltCircleRight,
   faCar,
   faPerson,
+  faCalendarDays
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "./Header.css";
-import { useState } from "react";
-import "react-datepicker/dist/react-datepicker.css";
-const Header = ({ type }) => {
-  const [personCount, setPersonCount] = useState(0);
+import { useNavigate } from 'react-router-dom';
+import './Header.css';
+import 'react-datepicker/dist/react-datepicker.css';
 
-  const handlePersonChange = (e) => {
-    let count = parseInt(e.target.value);
-    if (isNaN(count)) {
-      count = "";
-    } else if (count < 0) {
-      count = 0;
-    } else if (count > 4) {
-      count = 4;
-    }
-    setPersonCount(count);
+const Header = () => {
+  const navigate = useNavigate();
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    // Perform search logic or any other actions here
+    // ...
+    // Redirect or navigate to the desired page
+    navigate('/covoiturage');
   };
 
   return (
-   
     <div className="header">
-    <div className="headerContainer">
-      <form className="search-form">
-        <div className="input-container">
-          <input type="text" placeholder="De" name="from" required />
-        </div>
-        <div className="input-container">
-          <input type="text" placeholder="À" name="to" required />
-        </div>
-        <div className="input-container">
-          <input type="date" placeholder="Date" name="date" required />
-        </div>
-        <div className="input-container">
-          <input
-            type="number"
-            placeholder="Personnes"
-            name="person"
-            min=" "
-            max="4"
-            required
-          />
-        </div>
-        <button className="headerBtn">Rechercher</button>
-      </form>
+      <div className="headerContainer">
+        <form className="search-form" onSubmit={handleSearch}>
+          <div className="input-container">
+            <FontAwesomeIcon
+              icon={faArrowAltCircleRight}
+              className="input-icon"
+            />
+            <input type="text" placeholder="From" name="from" required />
+          </div>
+          <div className="input-container">
+            <FontAwesomeIcon icon={faCar} className="input-icon" />
+            <input type="text" placeholder="To" name="to" required />
+          </div>
+          <div className="input-container">
+            <FontAwesomeIcon icon={faCalendarDays} className="input-icon" />
+            <input type="date" placeholder="Date" name="date" required />
+          </div>
+          <div className="input-container">
+            <FontAwesomeIcon icon={faPerson} className="input-icon" />
+            <input
+              type="text"
+              placeholder="Person"
+              name="person"
+              min="0"
+              max="4"
+              required
+            />
+          </div>
+          <div className="headerSearchItem">
+            <button className="headerBtn" type="submit">Search</button>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
-);
+  );
 };
 
 export default Header;

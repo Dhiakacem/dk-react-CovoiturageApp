@@ -40,7 +40,7 @@
 }
 
 .input-icon {
-  color: lightgray;
+  color: #343f87;
 }
 
 .form-input {
@@ -56,8 +56,9 @@
   font-weight: 500;
   border-radius: 15px;
   padding: 8px;
+  margin-top: 18px;
   cursor: pointer;
-  width: 124px;
+  width: 160px;
   height: 37px;
   border: none;
 }
