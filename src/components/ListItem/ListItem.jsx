@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaSnowflake, FaSmoking } from "react-icons/fa";
+import { FaSnowflake, FaSmoking, FaLongArrowAltRight } from "react-icons/fa";
 import "./ListItem.css";
 
 const ListItem = () => {
@@ -54,7 +54,8 @@ const ListItem = () => {
       departureTime: "12:00 AM",
       arrivalTime: "2:00 PM",
       user: "User ",
-    }, {
+    },
+    {
       id: 6,
       name: "Item 2",
       price: "$20",
@@ -64,7 +65,56 @@ const ListItem = () => {
       arrivalTime: "2:00 PM",
       user: "User ",
     },
-    // Add more items here
+    {
+      id: 6,
+      name: "Item 2",
+      price: "$20",
+      place: "Paris",
+      arrive: "Lyon",
+      departureTime: "12:00 AM",
+      arrivalTime: "2:00 PM",
+      user: "User ",
+    },
+    {
+      id: 6,
+      name: "Item 2",
+      price: "$20",
+      place: "Paris",
+      arrive: "Lyon",
+      departureTime: "12:00 AM",
+      arrivalTime: "2:00 PM",
+      user: "User ",
+    },
+    {
+      id: 6,
+      name: "Item 2",
+      price: "$20",
+      place: "Paris",
+      arrive: "Lyon",
+      departureTime: "12:00 AM",
+      arrivalTime: "2:00 PM",
+      user: "User ",
+    },
+    {
+      id: 6,
+      name: "Item 2",
+      price: "$20",
+      place: "Paris",
+      arrive: "Lyon",
+      departureTime: "12:00 AM",
+      arrivalTime: "2:00 PM",
+      user: "User ",
+    },
+    {
+      id: 6,
+      name: "Item 2",
+      price: "$20",
+      place: "Paris",
+      arrive: "Lyon",
+      departureTime: "12:00 AM",
+      arrivalTime: "2:00 PM",
+      user: "User ",
+    },
   ];
 
   const getSystemDate = () => {
@@ -80,7 +130,7 @@ const ListItem = () => {
     <div className="itemcard-container">
       <div className="itemcard-info">
         <div className="itemcard-available">
-          <span className="available-label">Trajets disponibles :</span> 14
+          <span className="available-label">trajets disponibles :</span> 14
         </div>
       </div>
 
@@ -102,20 +152,25 @@ const ListItem = () => {
                         <span className="location-icon">&#128205;</span>
                         {item.place}
                       </li>
+
                       <li>
-                        <span className="location-icon">&#128206;</span>
+                        <span className="location-icon">&#9201;</span>
                         {item.departureTime}
                       </li>
                     </ul>
                   </div>
+                  <span className="arrow-icon">
+                    <FaLongArrowAltRight />
+                  </span>
                   <div className="itemcard-location">
                     <ul>
                       <li>
                         <span className="location-icon">&#128205;</span>
                         {item.arrive}
                       </li>
+
                       <li>
-                        <span className="location-icon">&#128206;</span>
+                        <span className="location-icon">&#9201;</span>
                         {item.arrivalTime}
                       </li>
                     </ul>

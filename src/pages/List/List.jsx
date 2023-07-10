@@ -5,6 +5,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import ListItem from "../../components/ListItem/ListItem";
 import "./List.css";
 import Footer from "../../components/footer/Footer";
+import ScrollToTop from "react-scroll-to-top";
 
 const List = () => {
   return (
@@ -18,8 +19,9 @@ const List = () => {
           <ListItem />
         </div>
       </div>
+      <ScrollToTop smooth />
       <Footer />
-    </>
+    </>   
   );
 };
 

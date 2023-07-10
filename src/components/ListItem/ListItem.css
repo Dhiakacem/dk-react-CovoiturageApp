@@ -8,22 +8,21 @@
   flex-direction: column;
   margin-right: 60px;
 }
+
 .itemcard-info {
   margin-top: 10px;
   margin-left: 60px;
   margin-bottom: 30px;
 }
 
-.date-label,
-.trajectory-label,
-.available-label {
-  font-weight: bold;
-}
-
 .itemcard-date,
 .itemcard-trajectory,
 .itemcard-available {
+  font-weight: 600;
+
+  font-variant: small-caps;
   margin-bottom: 5px;
+  font-size: 18px;
 }
 
 .itemcard {
@@ -43,35 +42,28 @@
 }
 
 .itemcard-header {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .itemcard-time {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  background-color: #008080;
+  background-image: linear-gradient(#81bc01, #343f87);
   color: #fff;
   padding: 4px;
   border-radius: 4px;
   font-size: 14px;
-  display: flex;
-  flex-direction: row;
 }
 
 .itemcard-price {
   font-size: 18px;
   font-weight: bold;
-  color: #008080;
+  color: #81bc01;
 }
 
 .itemcard-details {
   margin-top: 20px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
 
@@ -80,7 +72,6 @@
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
-  flex-basis: 50%;
 }
 
 .itemcard-location ul {
@@ -102,15 +93,22 @@
   margin-right: 5px;
 }
 
+.arrow-icon {
+  margin-top: 10px;
+  font-size: x-large;
+}
+
 .itemcard-user {
   display: flex;
   align-items: center;
 }
+
 .itemcard-users {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
+
 .user-icon {
   margin-right: 5px;
 }
@@ -124,6 +122,7 @@
 .itemcard-icons > * {
   margin-right: 10px;
 }
+
 .itemcard-pairs {
   display: flex;
   flex-wrap: wrap;
@@ -134,82 +133,4 @@
 .itemcard-pair {
   width: calc(50% - 20px);
   margin-bottom: 20px;
-}
-
-.itemcard-link {
-  text-decoration: none;
-  color: inherit;
-}
-
-.itemcard {
-  background-color: #f5f5f5;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  border-radius: 8px;
-  padding: 10px;
-  transition: box-shadow 0.3s;
-}
-
-.itemcard:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: scale(1.01);
-}
-
-.itemcard-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.itemcard-time {
-  background-color: #008080;
-  color: #fff;
-  padding: 4px;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.itemcard-price {
-  font-size: 18px;
-  font-weight: bold;
-  color: #008080;
-}
-
-.itemcard-details {
-  margin-top: 20px;
-}
-
-.itemcard-location {
-  margin-bottom: 10px;
-}
-
-.itemcard-location ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.location-icon {
-  margin-right: 5px;
-}
-
-.itemcard-users {
-  display: flex;
-  align-items: center;
-}
-
-.itemcard-user {
-  display: flex;
-  align-items: center;
-}
-
-.user-icon {
-  margin-right: 5px;
-}
-
-.itemcard-icons {
-  display: flex;
-}
-
-.itemcard-icons > * {
-  margin-right: 10px;
 }

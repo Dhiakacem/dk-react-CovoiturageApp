@@ -15,8 +15,7 @@ const Details = () => {
 
   const card = {
     id: 1,
-    name: " ben mohamed",
-    Lastname: "ahmed",
+    username: " HediUser",
     description: "Passionné de voyage de New York",
     rating: 4.5,
   };
@@ -52,7 +51,7 @@ const Details = () => {
                 activeClassName="activated"
                 className="nav-links"
               >
-                <FaUserEdit className="nav-icon" />
+                <FaUserEdit className="nav-edit-icon" />
               </NavLink>
             </div>
             <h2 className="profile-title">Profil Utilisateur</h2>
@@ -81,10 +80,7 @@ const Details = () => {
             <div className="Rate-container">
               <div className="rate position-1" key={card.id}>
                 <div className="rate-profile">
-                  <div className="username">
-                    {card.name}
-                    <div>{card.Lastname}</div>
-                  </div>
+                  <div className="username">{card.username}</div>
                 </div>
                 <div className="description">{card.description}</div>
                 <div className="rating">{renderStars(card.rating)}</div>
