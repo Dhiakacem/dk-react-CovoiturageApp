@@ -30,11 +30,7 @@ const Sidebar = () => {
         </button>
       </h2>
       <ul className="menu">
-        <li
-          className={`menu-item ${
-            selectedOption === "departure" ? "selected" : ""
-          }`}
-        >
+        <li className="menu-item ">
           <label>
             <FaClock className="sub-menu-icon" /> Départ le plus tôt
             <input
@@ -46,11 +42,7 @@ const Sidebar = () => {
             />
           </label>
         </li>
-        <li
-          className={`menu-item ${
-            selectedOption === "price" ? "selected" : ""
-          }`}
-        >
+        <li className="menu-item ">
           <label>
             <FaDollarSign className="sub-menu-icon" /> Prix le plus bas
             <input
@@ -62,11 +54,7 @@ const Sidebar = () => {
             />
           </label>
         </li>
-        <li
-          className={`menu-item ${
-            selectedOption === "startPoint" ? "selected" : ""
-          }`}
-        >
+        <li className="menu-item ">
           <label>
             <FaWalking className="top-menu-icon" /> Proche du point de départ
             <input
@@ -78,11 +66,7 @@ const Sidebar = () => {
             />
           </label>
         </li>
-        <li
-          className={`menu-item ${
-            selectedOption === "endPoint" ? "selected" : ""
-          }`}
-        >
+        <li className="menu-item ">
           <label>
             <FaWalking className="top-menu-icon" /> Proche du point d'arrivée
             <input
@@ -100,11 +84,7 @@ const Sidebar = () => {
             <FaClock className="sub-menu-icon" /> Heure de départ
           </h3>
           <ul className="sub-menu">
-            <li
-              className={`sub-menu-item ${
-                selectedOption === "before6" ? "selected" : ""
-              }`}
-            >
+            <li className="sub-menu-item">
               <label>
                 Avant 06:00
                 <input
@@ -115,11 +95,7 @@ const Sidebar = () => {
                 />
               </label>
             </li>
-            <li
-              className={`sub-menu-item ${
-                selectedOption === "6to12" ? "selected" : ""
-              }`}
-            >
+            <li className="sub-menu-item">
               <label>
                 06:00 - 12:00
                 <input
@@ -130,11 +106,7 @@ const Sidebar = () => {
                 />
               </label>
             </li>
-            <li
-              className={`sub-menu-item ${
-                selectedOption === "12to18" ? "selected" : ""
-              }`}
-            >
+            <li className="sub-menu-item">
               <label>
                 12:01 - 18:00
                 <input
@@ -175,12 +147,7 @@ const Sidebar = () => {
             >
               <label>
                 <FaStar className="star-menu-icon" /> Super Conducteur
-                <input
-                  type="checkbox"
-                  value="superDriver"
-                  checked={selectedOption === "superDriver"}
-                  onChange={() => handleOptionChange("superDriver")}
-                />
+                <input type="checkbox" value="superDriver" />
               </label>
             </li>
             <li
@@ -190,10 +157,7 @@ const Sidebar = () => {
             >
               <label>
                 <FaSmoking className="sub-menu-icon" /> Fumeurs autorisés
-                <input
-                  type="checkbox"
-                  value="smokingAllowed"
-                />
+                <input type="checkbox" value="smokingAllowed" />
               </label>
             </li>
             <li

@@ -1,15 +1,16 @@
 import React from "react";
 import "./Footer.css";
 import logo from "./logo.png";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-container">
-     
+        <Link to="/">
           <img src={logo} alt="Logo" className="footer-logo-img" />
-     
-        
+        </Link>
+
         <div className="footer-section">
           <h3 className="footer-heading">Nos services</h3>
           <ul className="footer-links">
@@ -36,5 +37,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
- 

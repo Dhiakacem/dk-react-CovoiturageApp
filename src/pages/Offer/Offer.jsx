@@ -8,7 +8,7 @@ import "./Offer.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import GoogleMapsImage from "../../assets/google-maps-image.jpg";
-import { FaChair, FaSmoking, FaSnowflake } from "react-icons/fa";
+import { FaSmoking, FaSnowflake } from "react-icons/fa";
 
 const Offer = () => {
   const [departure, setDeparture] = useState("");
@@ -16,7 +16,6 @@ const Offer = () => {
   const [departureDate, setDepartureDate] = useState("");
   const [departureTime, setDepartureTime] = useState("");
   const [persons, setPersons] = useState("");
-  const [seatsAvailable, setSeatsAvailable] = useState(0);
   const [popupOpen, setPopupOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("");
 
@@ -46,13 +45,8 @@ const Offer = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    // Perform form submission logic here
-    // You can access the selected radio option through the 'selectedOption' state variable
-
-    // Show a success toast notification
     toast.success("Formulaire soumis avec succès !");
 
-    // Close the popup
     setPopupOpen(false);
   };
 
@@ -142,17 +136,6 @@ const Offer = () => {
                   />
                   <FaSmoking className="option-icon" />
                   <span className="option-label">Fumeurs autorisés</span>
-                </label>
-              </div>
-              <div className="option">
-                <label>
-                  <input
-                    type="checkbox"
-                    value="option3"
-                    onChange={() => setSelectedOption("option3")}
-                  />
-                  <FaChair className="option-icon" />
-                  <span className="option-label">Max. 2 sièges arrière</span>
                 </label>
               </div>
               <button type="submit" className="submit-button">

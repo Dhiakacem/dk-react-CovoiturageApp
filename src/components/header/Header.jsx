@@ -2,12 +2,12 @@ import {
   faArrowAltCircleRight,
   faCar,
   faPerson,
-  faCalendarDays
+  faCalendarDays,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useNavigate } from 'react-router-dom';
-import './Header.css';
-import 'react-datepicker/dist/react-datepicker.css';
+import { Link, useNavigate } from "react-router-dom";
+import "./Header.css";
+import "react-datepicker/dist/react-datepicker.css";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -17,7 +17,7 @@ const Header = () => {
     // Perform search logic or any other actions here
     // ...
     // Redirect or navigate to the desired page
-    navigate('/covoiturage');
+    navigate("/covoiturage");
   };
 
   return (
@@ -51,7 +51,9 @@ const Header = () => {
             />
           </div>
           <div className="headerSearchItem">
-            <button className="headerBtn" type="submit">Search</button>
+            <Link to="/covoiturage">
+              <button className="headerBtn">Rechercher</button>
+            </Link>{" "}
           </div>
         </form>
       </div>

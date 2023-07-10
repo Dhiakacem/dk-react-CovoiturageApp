@@ -15,8 +15,8 @@ const Details = () => {
 
   const card = {
     id: 1,
-    name: "John",
-    Lastname: "Doe",
+    name: " ben mohamed",
+    Lastname: "ahmed",
     description: "Passionné de voyage de New York",
     rating: 4.5,
   };
@@ -48,7 +48,7 @@ const Details = () => {
           <div className="profile-content">
             <div className="edit-icon">
               <NavLink
-                to="/edit"
+                to="/Profile/Edit"
                 activeClassName="activated"
                 className="nav-links"
               >

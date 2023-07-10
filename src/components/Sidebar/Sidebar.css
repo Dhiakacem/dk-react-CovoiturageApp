@@ -1,9 +1,9 @@
 .sidebara {
   padding: 15px;
-  width: 320px;
-  height: 600px;
+  width: 300px;
+  height: 660px;
   box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.1);
-  margin-left: 200px;
+  margin-left: 50px;
   border-radius: 20px;
   margin-bottom: 30px;
   border-right: 3px solid #bbbbbb;
@@ -13,11 +13,10 @@
 }
 
 .sidebar-heading {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-size: 22px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 10px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana;
 }
 
@@ -27,11 +26,11 @@
 }
 
 .menu-item {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .menu-item label {
@@ -39,18 +38,18 @@
   align-items: center;
   margin-bottom: 5px;
   cursor: pointer;
-  margin-bottom: 5px;
+  width: 300px;
 }
 
-.menu-item input[type="radio"],
-.menu-item input[type="checkbox"] {
+.menu-item input {
   margin-left: 85px;
-  right: 980px;
+  right: 990px;
   position: absolute;
   color: #34a853;
   border-radius: 50%;
   margin-left: 0;
   margin-left: 20px;
+  
 }
 
 .menu-item input[type="radio"] + label::before,
@@ -101,7 +100,7 @@
 }
 
 .sub-menu-item {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .sub-menu-icon {
@@ -140,6 +139,7 @@ h3 {
   right: 990px;
   position: absolute;
   margin-left: 10px;
+  margin-top: 7px;
 }
 
 .delete-all:hover {

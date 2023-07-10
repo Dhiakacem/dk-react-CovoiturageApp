@@ -7,20 +7,22 @@ import ImageText from "../../components/ImageText/ImageText";
 import Featured from "../../components/Featured/Featured";
 import Proprity from "../../components/Proprity/Proprity";
 import Tags from "../../components/Tags/Tags";
+import ScrollToTop from "react-scroll-to-top";
 
 const Home = () => {
   return (
     <div className="home">
       <Navbar />
       <Header />
-      <SocialLinks/> 
-    <div className="homeContainer">
-      <ImageText/>
-      <Featured/>
-      <Proprity/>
-      <Tags/>
-      <Footer />  
-       
+      <SocialLinks />
+      <div className="homeContainer">
+        <ImageText />
+        <Featured />
+        <Proprity />
+        <Tags />
+        <Footer />
+
+        <ScrollToTop smooth  />
       </div>
     </div>
   );

@@ -4,62 +4,96 @@
   margin-top: 30px;
   margin-bottom: 40px;
 }
+
 h2 {
   font-size: 32px;
-  font-family: "Poppins" , serif;
+  font-family: "Poppins", serif;
   font-weight: 500;
   text-align: center;
   margin-top: 30px;
 }
 
 .Carcard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-right: 150px;
+
+}
+.firstCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  width: 45%;
+  margin-bottom: 20px;
+  margin-left: 150px;
 }
 
-.cardicon {
-  font-size: 24px;
-  margin-bottom: 10px;
+.profilecard {
+  border-right: 1px solid #ccc;
+  padding-right: 20px;
+  margin-right: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.middle-line {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 18px;
-    margin-bottom: 18px;
-    width: 400px;
-  }
-  
-  .line-label {
-    font-weight: bold;
-    margin-right: 10px;
-  }
-  .CarLine{
-    border: 2px solid #cccccca2;
-    width: 410px;
-  }
-  .line-price {
-    font-size: 1.2rem;
-  }
-  .CenterPrice{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 20px;
-  }
 
 .carddetails {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.cardicon {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #81bc01;
+}
+
+.middle-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  width: 400px;
+}
+
+.line-label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.CarLine {
+  border: 2px solid #cccccca2;
+  width: 410px;
+}
+
+.line-price {
+  font-size: 1.2rem;
+}
+
+.CenterPrice {
+  display: flex;
   flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.trajet {
+  margin: 0 10px;
 }
 
 .cardinfo {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
 .cardinfoicon {
@@ -68,13 +102,24 @@ h2 {
 
 .profileinfo {
   display: flex;
+  flex-direction: column;
   align-items: center;
   margin-bottom: 20px;
 }
 
+.profilecard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: 80px;
+}
+
 .profileicon {
   font-size: 24px;
-  margin-right: 10px;
 }
 
 .profiletext {
@@ -98,6 +143,29 @@ h2 {
 
 .star.half {
   color: #c0c0c0;
+}
+
+.profileoptions {
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+ margin-left: 60px;
+}
+
+.option-icon {
+  margin-right: 5px;
+}
+
+.option-text {
+  margin-top: 2px;
+}
+
+.option-icon.ban {
+  color: red;
 }
 
 .validerbutton {

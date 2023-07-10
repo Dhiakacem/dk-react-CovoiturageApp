@@ -1,12 +1,16 @@
 .Search-container {
   margin-top: 20px;
-  background-color: #dadada62;
   padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  margin-left: 40px;
+  margin-right: 40px;
+  background-color: #f5f5f5;
+  border-radius: 40px;
+  box-shadow: 0 5px 5px #ccc9c9;
 }
 .containers {
   max-width: 600px;

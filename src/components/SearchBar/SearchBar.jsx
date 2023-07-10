@@ -8,6 +8,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import "./SearchBar.css";
+import { Link } from "react-router-dom";
 
 function SearchBar() {
   const [personCount, setPersonCount] = useState(0);
@@ -61,7 +62,9 @@ function SearchBar() {
             />
           </div>
           <div className="headerSearchItem">
+            <Link to="/covoiturage">
             <button className="headerBtn">Rechercher</button>
+            </Link>
           </div>
         </form>
       </div>

@@ -18,7 +18,6 @@ const Featured = () => {
     { departure: "Dubai", arrival: "Le Caire" },
     { departure: "Dubai", arrival: "Le Caire" },
     { departure: "Dubai", arrival: "Le Caire" },
-    { departure: "Dubai", arrival: "Le Caire" },
   ];
 
   const displayedCards = showAll ? cards : cards.slice(0, 4);
