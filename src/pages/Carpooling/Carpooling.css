@@ -22,7 +22,6 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 10px;
   margin-right: 150px;
-
 }
 .firstCard {
   display: flex;
@@ -39,9 +38,11 @@ h2 {
 .profilecard {
   border-right: 1px solid #ccc;
   padding-right: 20px;
-  margin-right: 20px;
+  margin-right: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
 }
+
 
 .carddetails {
   display: flex;
@@ -125,6 +126,7 @@ h2 {
 .profiletext {
   display: flex;
   flex-direction: column;
+  margin-right: 20px;
 }
 
 .profilename {
@@ -153,7 +155,8 @@ h2 {
 .option {
   display: flex;
   align-items: center;
- margin-left: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .option-icon {
@@ -185,4 +188,37 @@ h2 {
 
 .validerbutton:hover {
   background-color: #81bc01;
+}
+/* Existing styles */
+
+.status-container {
+  position: fixed;
+  top: 100px;
+  right: 30px;
+  background-color: green;
+  border-radius: 15px;
+  width: 100px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.status-blinking {
+  animation: blink-animation 1s linear infinite;
+  
+}
+
+@keyframes blink-animation {
+ 
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

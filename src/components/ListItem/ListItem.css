@@ -6,7 +6,7 @@
 .itemcard-container {
   display: flex;
   flex-direction: column;
-  margin-right: 60px;
+  margin-right: 100px;
 }
 
 .itemcard-info {
@@ -58,7 +58,7 @@
 .itemcard-price {
   font-size: 18px;
   font-weight: bold;
-  color: #81bc01;
+  color: #283384;
 }
 
 .itemcard-details {
@@ -133,4 +133,27 @@
 .itemcard-pair {
   width: calc(50% - 20px);
   margin-bottom: 20px;
+}
+.itemcard-status {
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.itemcard-status-available {
+  background-color: green; 
+}
+
+.itemcard-status-cancelled {
+  background-color: red;
+}
+
+.itemcard-status-in-progress {
+  background-color: orange;
+}
+.itemcard.disabled {
+  opacity: 0.7;
+  pointer-events: none;
 }

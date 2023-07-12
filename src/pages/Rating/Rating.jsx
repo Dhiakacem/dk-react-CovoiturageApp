@@ -65,17 +65,17 @@ const Rating = () => {
 
       <Popup open={popupOpen} onClose={() => setPopupOpen(false)} modal>
         <div className="popup-content">
-          <h2 className="popup-title">Rate My Service</h2>
+          <h2 className="popup-title">Notez Mes Services</h2>
           <div className="stars">{renderStars()}</div>
           <form className="form" onSubmit={handleSubmit}>
             <textarea
               className="comment"
-              placeholder="Leave a comment..."
+              placeholder="Laisser un commentaire..."
               value={comment}
               onChange={handleCommentChange}
             ></textarea>
-            <button type="submit" className="submit-button">
-              Submit
+            <button type="submit" className="submit-buttons">
+              Confirmer
             </button>
           </form>
           <button className="close-button" onClick={() => setPopupOpen(false)}>

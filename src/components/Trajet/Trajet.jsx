@@ -19,7 +19,7 @@ const Trajet = () => {
 
   return (
     <div className="featureds-container">
-      <h3 className="title">My trip...</h3>
+      <h3 className="title">Mes Voyages...</h3>
       <div className="card-container">
         {displayedCards.map((card, index) => (
           <div className="card" key={index}>
@@ -33,11 +33,11 @@ const Trajet = () => {
       </div>
       {!showAll ? (
         <button className="show-more-button" onClick={toggleShowAll}>
-          Show More
+          Afficher plus
         </button>
       ) : (
         <button className="show-more-button" onClick={toggleShowAll}>
-          Show Less
+          Afficher moins
         </button>
       )}
     </div>

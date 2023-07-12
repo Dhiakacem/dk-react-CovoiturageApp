@@ -5,7 +5,7 @@ import {
   FaCar,
   FaClock,
   FaBan,
-  FaUsers,
+  FaUsers,  
 } from "react-icons/fa";
 import { IoMdStar, IoMdStarOutline } from "react-icons/io";
 import Navbar from "../../components/Navbar/Navbar";
@@ -31,6 +31,7 @@ const Carpooling = () => {
     description: "Passionate traveler",
     note: 4.8,
     prix: "15$",
+    status : "Disponible",
   };
 
   const renderStars = (note) => {
@@ -51,7 +52,7 @@ const Carpooling = () => {
   };
 
   const handleValiderClick = () => {
-    toast.success("Validation successful!", {
+    toast.success("Validation effectuée avec succès. ", {
       position: "top-right",
       autoClose: 3000,
       hideProgressBar: true,
@@ -122,6 +123,10 @@ const Carpooling = () => {
       <button className="validerbutton" onClick={handleValiderClick}>
         Valider
       </button>
+
+      <div className="status-container">
+        <span className="status-blinking">{userProfile.status}</span>
+      </div>
 
       <ToastContainer />
       <Footer />

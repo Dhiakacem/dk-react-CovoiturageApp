@@ -16,7 +16,7 @@ const Details = () => {
   const card = {
     id: 1,
     username: " HediUser",
-    description: "Passionné de voyage de New York",
+    description: "descriptions",
     rating: 4.5,
   };
 

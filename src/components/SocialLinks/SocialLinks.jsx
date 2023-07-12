@@ -10,29 +10,30 @@ const SocialLinks = () => {
       id: 1,
       child: (
         <>
-          LinkedIn <FaLinkedin size={20} className="linkedin-icon" />
-        </>
-      ),
-      href: "https://www.linkedin.com/company/veo-tunisie/",
-      style: "rounded-tr-md",
-    },
-    {
-      id: 2,
-      child: (
-        <>
           Facebook <FaFacebookF size={20} className="github-icon" />
         </>
       ),
       href: "https://www.facebook.com/veoworldwideservices/",
     },
+
     {
-      id: 3,
+      id: 2,
       child: (
         <>
          Instagram  <RiInstagramFill size={20} className="mail-icon" />
         </>
       ),
       href: "https://www.instagram.com/veoworlwide/",
+    },
+    {
+      id: 3,
+      child: (
+        <>
+          LinkedIn <FaLinkedin size={20} className="linkedin-icon" />
+        </>
+      ),
+      href: "https://www.linkedin.com/company/veo-worldwide-services",
+      style: "rounded-tr-md",
     },
   ];
 

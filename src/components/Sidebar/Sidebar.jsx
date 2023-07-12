@@ -1,24 +1,18 @@
 import React, { useState } from "react";
 import "./Sidebar.css";
-import {
-  FaClock,
-  FaStar,
-  FaCar,
-  FaSnowflake,
-  FaSmoking,
-  FaDollarSign,
-  FaWalking,
-} from "react-icons/fa";
+import { FaClock, FaStar, FaCar, FaSnowflake, FaSmoking, FaDollarSign, FaWalking } from "react-icons/fa";
 
-const Sidebar = () => {
+const Sidebar = ({ handleFilterChange }) => {
   const [selectedOption, setSelectedOption] = useState(null);
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
+    handleFilterChange(option);
   };
 
   const handleClearAll = () => {
     setSelectedOption(null);
+    handleFilterChange(null);
   };
 
   return (
@@ -147,7 +141,12 @@ const Sidebar = () => {
             >
               <label>
                 <FaStar className="star-menu-icon" /> Super Conducteur
-                <input type="checkbox" value="superDriver" />
+                <input
+                  type="checkbox"
+                  value="superDriver"
+                  checked={selectedOption === "superDriver"}
+                  onChange={() => handleOptionChange("superDriver")}
+                />
               </label>
             </li>
             <li
@@ -157,7 +156,12 @@ const Sidebar = () => {
             >
               <label>
                 <FaSmoking className="sub-menu-icon" /> Fumeurs autorisés
-                <input type="checkbox" value="smokingAllowed" />
+                <input
+                  type="checkbox"
+                  value="smokingAllowed"
+                  checked={selectedOption === "smokingAllowed"}
+                  onChange={() => handleOptionChange("smokingAllowed")}
+                />
               </label>
             </li>
             <li
@@ -167,7 +171,12 @@ const Sidebar = () => {
             >
               <label>
                 <FaSnowflake className="cli-menu-icon" /> Climatisation
-                <input type="checkbox" value="airConditioning" />
+                <input
+                  type="checkbox"
+                  value="airConditioning"
+                  checked={selectedOption === "airConditioning"}
+                  onChange={() => handleOptionChange("airConditioning")}
+                />
               </label>
             </li>
           </ul>
