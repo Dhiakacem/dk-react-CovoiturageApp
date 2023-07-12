@@ -8,11 +8,10 @@ const Search = () => {
   return (
     <div className="Search">
       <Navbar />
-      <SocialLinks/> 
+      <SocialLinks />
       <SearchBar />
-      <div className="footer">
+
       <Footer />
-      </div>
     </div>
   );
 };

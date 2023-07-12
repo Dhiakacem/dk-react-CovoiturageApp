@@ -8,7 +8,7 @@ const ListItem = (selectedOption) => {
     {
       id: 1,
       name: "Item 1",
-      price: "$15",
+      price: "10",
       place: "Paris",
       arrive: "Lyon",
       departureTime: "9:00 AM",

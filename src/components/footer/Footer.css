@@ -1,6 +1,6 @@
 .footer {
   margin-top: 10px;
-  padding-top: 80px ;
+  padding-top: 80px;
   padding-bottom: 20px;
   color: black;
 }
@@ -14,7 +14,10 @@
 }
 
 .footer-section {
-  width: 25%;
+  width: 100%;
+  max-width: 25%;
+  padding: 0 10px;
+  margin-bottom: 20px;
 }
 
 .footer-heading {
@@ -41,6 +44,7 @@
   color: #333;
   cursor: pointer;
 }
+
 .footer-logo {
   display: flex;
   align-items: center;
@@ -56,4 +60,18 @@
   margin-top: 30px;
   text-align: center;
   font-size: 0.9rem;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 768px) {
+  .footer-section {
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer-section {
+    max-width: 100%;
+  }
 }

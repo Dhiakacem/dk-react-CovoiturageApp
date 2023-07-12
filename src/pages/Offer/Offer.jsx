@@ -9,6 +9,7 @@ import Navbar from "../../components/Navbar/Navbar";
 import Footer from "../../components/footer/Footer";
 import GoogleMapsImage from "../../assets/google-maps-image.jpg";
 import { FaSmoking, FaSnowflake } from "react-icons/fa";
+import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const Offer = () => {
   const [departure, setDeparture] = useState("");
@@ -156,6 +157,7 @@ const Offer = () => {
         Ajouter
       </button>
       <ToastContainer />
+      <Scrollbar/>
       <Footer />
     </>
   );

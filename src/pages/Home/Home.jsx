@@ -7,7 +7,8 @@ import ImageText from "../../components/ImageText/ImageText";
 import Featured from "../../components/Featured/Featured";
 import Proprity from "../../components/Proprity/Proprity";
 import Tags from "../../components/Tags/Tags";
-import ScrollToTop from "react-scroll-to-top";
+
+import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const Home = () => {
   return (
@@ -22,7 +23,7 @@ const Home = () => {
         <Tags />
         <Footer />
 
-        <ScrollToTop smooth  />
+        <Scrollbar />
       </div>
     </div>
   );

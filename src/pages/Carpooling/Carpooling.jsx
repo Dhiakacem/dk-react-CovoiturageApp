@@ -13,6 +13,7 @@ import Footer from "../../components/footer/Footer";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./Carpooling.css";
+import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const Carpooling = () => {
   const getRandomTime = () => {
@@ -129,6 +130,7 @@ const Carpooling = () => {
       </div>
 
       <ToastContainer />
+      <Scrollbar />
       <Footer />
     </>
   );

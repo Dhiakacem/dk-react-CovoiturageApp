@@ -6,6 +6,7 @@ import profileImage from "../../assets/Profile-image.png";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Scrollbar from "../../components/Scrollbar/Scrollbar";
 
 const Profile = () => {
   const [name, setName] = useState("");
@@ -195,6 +196,7 @@ const Profile = () => {
         </div>
       </div>
       <Footer />
+      <Scrollbar />
     </>
   );
 };
