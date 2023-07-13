@@ -33,19 +33,19 @@ function Navbar() {
         <div className={`navbar-menu ${isOpen ? "open" : ""}`}>
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link" >
+              <Link to="/" className="nav-link">
                 <FaHome className="nav-icon" />
                 Home
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/Offer" className="nav-link" >
+              <Link to="/Offer" className="nav-link">
                 <FaPlus className="nav-icon" />
-                Add Trip
+                Trajet
               </Link>
             </li>{" "}
             <li className="nav-item">
-              <Link to="/search" className="nav-link" >
+              <Link to="/search" className="nav-link">
                 <FaSearch className="nav-icon" />
                 Recherche
               </Link>
@@ -67,7 +67,7 @@ function Navbar() {
                     onClick={closeNavbar}
                   >
                     <FaUser className="dropdown-icon" />
-                    Profile
+                    Mon profile
                   </Link>
                   <hr className="dropdown-line" />
                   <Link
@@ -76,9 +76,8 @@ function Navbar() {
                     onClick={closeNavbar}
                   >
                     <FaSignOutAlt className="dropdown-icon" />
-                    Logout
+                    Déconnexion
                   </Link>
-                  
                 </div>
               )}
             </div>

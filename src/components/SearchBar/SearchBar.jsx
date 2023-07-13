@@ -49,7 +49,6 @@ function SearchBar() {
           </div>
           <div className="input-container">
             <FontAwesomeIcon icon={faPerson} className="input-icon" />
-
             <input
               type="text"
               placeholder="Personne"

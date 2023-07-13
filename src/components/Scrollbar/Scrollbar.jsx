@@ -31,7 +31,7 @@ const Scrollbar = () => {
       onClick={scrollToTop}
       title="Scroll To Top"
     >
-     &uarr;
+      &uarr;
     </button>
   );
 };
